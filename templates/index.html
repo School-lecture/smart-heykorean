@@ -12,6 +12,7 @@
 	<!-- css for doc -->
 	<link href="../css/project.min.css" rel="stylesheet">
 
+	<link href="../css/music.css" rel="stylesheet">
 	<link href="../css/main.css" rel="stylesheet">
 	<!-- favicon -->
 	<!-- ... -->
@@ -25,7 +26,7 @@
 				</a>
 			</li>
 		</ul>
-		<a class="header-logo margin-left-no" href="index.html">hey-korean</a>
+		<a class="header-logo margin-left-no" href="index.html"><img src="../css/images/logo.png"></a>
 		<ul class="nav nav-list pull-right">
 			<li class="dropdown margin-right">
 				<a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
@@ -51,41 +52,120 @@
 		<div class="menu-scroll">
 			<div class="menu-content">
 				<a class="menu-logo" href="index.html">내 음악</a>
-				<div style="text-align : center;">
-					<img src="../css/images/ex02.PNG">
+
+				<div class="player">
+					<div class="player__header">
+					<div class="player__img player__img--absolute slider">
+						<button class="player__button player__button--absolute--nw playlist">
+						<img src="http://physical-authority.surge.sh/imgs/icon/playlist.svg" alt="playlist-icon">	
+						</button>
+				
+						<button class="player__button player__button--absolute--center play">		
+						<img src="http://physical-authority.surge.sh/imgs/icon/play.svg" alt="play-icon">
+						<img src="http://physical-authority.surge.sh/imgs/icon/pause.svg" alt="pause-icon">	
+						</button>
+				
+						<div class="slider__content">
+							<img class="img slider__img" src="http://physical-authority.surge.sh/imgs/1.jpg" alt="cover">
+							<img class="img slider__img" src="http://physical-authority.surge.sh/imgs/2.jpg" alt="cover">
+							<img class="img slider__img" src="http://physical-authority.surge.sh/imgs/3.jpg" alt="cover">
+							<img class="img slider__img" src="http://physical-authority.surge.sh/imgs/4.jpg" alt="cover">
+							<img class="img slider__img" src="http://physical-authority.surge.sh/imgs/5.jpg" alt="cover">
+						</div>	
+					</div>
+				
+					<div class="player__controls">
+						<button class="player__button back">			
+							<img class="img" src="http://physical-authority.surge.sh/imgs/icon/back.svg" alt="back-icon">
+						</button>			
+						<p class="player__context slider__context">
+							<strong class="slider__name"></strong>
+							<span class="player__title slider__title"></span>	
+						</p>
+						<button class="player__button next">
+							<img class="img" src="http://physical-authority.surge.sh/imgs/icon/next.svg" alt="next-icon">
+						</button>
+						<div class="progres">	
+							<div class="progres__filled"></div>
+						</div>
+					</div>	
 				</div>
-				<div style="text-align : center;">
-					<img src="../css/images/ex03.PNG">
+				
+					<ul class="player__playlist list">
+						<li class="player__song">
+						<img class="player__img img" src="http://physical-authority.surge.sh/imgs/1.jpg" alt="cover">
+						<p class="player__context">
+							<b class="player__song-name">Hero</b>
+							<span class="flex">		
+							<span class="player__title">LUCY</span>
+							<span class="player__song-time"></span>
+							</span>
+						</p>
+						<audio class="audio" src="y2mate.com - MV LUCY  Hero히어로.mp3"></audio>
+						</li>
+						
+						<li class="player__song">
+						<img class="player__img img" src="http://physical-authority.surge.sh/imgs/2.jpg" alt="cover">
+						<p class="player__context">		
+							<b class="player__song-name">blinding lights</b>
+							<span class="flex">
+							<span class="player__title">the weeknd</span>
+							<span class="player__song-time"></span>
+							</span>
+						</p>
+						<audio class="audio" src="http://physical-authority.surge.sh/music/2.mp3"></audio>
+						</li>
+
+						<li class="player__song">
+						<img class="player__img img" src="http://physical-authority.surge.sh/imgs/3.jpg" alt="cover">
+						<p class="player__context">
+							<b class="player__song-name">джованна</b>
+							<span class="flex">
+							<span class="player__title">enrasta</span>
+							<span class="player__song-time"></span>
+							</span>	
+						</p>
+						<audio class="audio" src="http://physical-authority.surge.sh/music/3.mp3"></audio>
+					</li>
+				
+					<li class="player__song">
+						<img class="player__img img" src="http://physical-authority.surge.sh/imgs/4.jpg" alt="cover">
+						<p class="player__context">
+						<b class="player__song-name">a man</b>
+						<span class="flex">
+							<span class="player__title">travis scott</span>
+							<span class="player__song-time"></span>	
+						</span>			
+						</p>
+						<audio class="audio" src="http://physical-authority.surge.sh/music/4.mp3"></audio>
+					</li>
+				
+					<li class="player__song">
+						<img class="player__img img" src="http://physical-authority.surge.sh/imgs/5.jpg" alt="cover">
+						<p class="player__context ">
+						<b class="player__song-name">unforgetting</b>
+						<span class="flex">
+							<span class="player__title">zaxx</span>
+							<span class="player__song-time"></span>
+						</span>
+						</p>
+						<audio class="audio" src="http://physical-authority.surge.sh/music/5.mp3"></audio>
+					</li>
+				
+							
+					</ul>
 				</div>
+
 				<ul class="nav">
 					<li>
 						<a class="collaosed waves-attach" data-toggle="collapse" href="#doc_menu_components">가사보기</a>
 						<ul class="menu-collapse collapse" id="doc_menu_components">
 							<li>
 								<div style="text-align:center">
-									<br/>이 밤 그날의 반딧불을 당신의<br/>참 가까이 보낼게요<br/>사랑한다는 말이에요<br/><br/>나 우리의 첫 입맞춤을 떠올려<br/>그럼 언제든 눈을 감고<br/>가장 먼 곳으로 가요<br/><br/>난 파도가 머물던<br/>모래 위에 적힌 글씨처럼<br/>그대가 멀리 사라져 버릴 것 같아<br/>늘 그리워, 그리워<br/><br/>
+									<br/>부디 너의 맘에 하얗게 내린 눈꽃이<br/>차갑게 얼지 않기를<br/>너라는 이름은 오뉴월의 꿈만 같아<br/>
+									깨고 싶지 않은걸<br/><br/>너라면 이런 날 기다릴 수 있을까<br/>저 달이 떨어져도<br/>난 아직까지 그대로 일텐데<br/>
+									막다른 길이라고<br/>또 혼자서 넘어져 우울하고<br/>난 그대에게 조금 더 멋있는 사람이<br/>돼 주고 싶었는데
 								</div>
-							</li>
-
-						</ul>
-					</li>
-					<li>
-						<a class="collapsed waves-attach" data-toggle="collapse" href="#doc_menu_menu1">메뉴01</a>
-						<ul class="menu-collapse collapse" id="doc_menu_menu1">
-							<li>
-								<a class="waves-attach" href="#">세부메뉴1</a>
-							</li>
-							<li>
-								<a class="waves-attach" href="#">세부메뉴2</a>
-							</li>
-							<li>
-								<a class="waves-attach" href="#">세부메뉴3</a>
-							</li>
-							<li>
-								<a class="waves-attach" href="#">세부메뉴4</a>
-							</li>
-							<li>
-								<a class="waves-attach" href="#">세부메뉴5</a>
 							</li>
 						</ul>
 					</li>
@@ -180,24 +260,22 @@
 									<div align = "center">
 										<table>
 											<tr>
-												 <td><img src="../css/images/IU.jpg" alt="선택한노래" width="200" height="200"></td>
-												 <td rowspan="3">
-												 
-													 <button id="popup_open_btn" type="button">노래선택</button>
-													 <button id="popup_open_btn" type="submit"> 매칭 </button>
-													 <button id="popup_open_btn" type="submit">담기</button>
-												 
-												 </td>
-												  <td><img src="../css/images/ANN.jpg" alt="결과노래" width="200" height="200"></td>
+												<td><img src="../css/images/IU.jpg" alt="선택한노래" width="200" height="200"></td>
+												<td rowspan="3">												
+													<button id="popup_open_btn" type="button">노래선택</button>
+													<button id="popup_open_btn" type="submit"> 매칭 </button>
+													<button id="popup_open_btn" type="submit">담기</button>												
+												</td>
+												<td><img src="../css/images/ANN.jpg" alt="결과노래" width="200" height="200"></td>
 											</tr>
 											<tr>
-												<td>가수</font></td>
 												<td>가수</td>
-											 </tr>
-											 <tr>
-												 <td>제목</td>
-												 <td>제목</td>
-											 </tr>
+												<td>가수</td>
+											</tr>
+											<tr>
+												<td>제목</td>
+												<td>제목</td>
+											</tr>
 										</table>
 									</div>
 									<p>사용방법을 잘 모르시겠다면 <a href="#" target="_blank">여기<sup class="margin-left-xs"><span class="icon">open_in_new</span></sup></a> 를 클릭하세요.</p>
@@ -327,5 +405,7 @@
 			element.checked = true;
 		}                 
 	</script>
+
+<script src="../assets/js/music.js"></script>
 </body>
 </html>

@@ -186,7 +186,7 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-7 col-lg-push-3 col-sm-10 col-sm-push-1">
+				<div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-2">
 					<section class="content-inner margin-top-no">
 						<div class="card">
 							<div class="card-main" align="center">
@@ -284,52 +284,51 @@
 							</div>
 						</div>
 						<h2 class="content-sub-heading">분석비교결과</h2>
-						<p>원하시는 매칭곡과 유사도가 가장 높은 결과를 보여주고, 유사곡 리스트를 확인할 수 있습니다.　　 <a href="#" target="_blank">더 많은 결과 확인하기<sup class="margin-left-xs"><span class="icon">open_in_new</span></sup></a>.</p>
+						<p>원하시는 매칭곡과 유사도가 가장 높은 결과를 보여주고, </br>유사곡 리스트를 확인할 수 있습니다. </br><a href="#" target="_blank">더 많은 결과 확인하기<sup class="margin-left-xs"><span class="icon">open_in_new</span></sup></a>.</p>
 						<div class="tile-wrap">
 								<div class="tile-inner">
 
-								 <!--차트-->
-								 <canvas id="radar-chart" width="700" height="500"></canvas>
-								 <script>
-								 new Chart(document.getElementById("radar-chart"), {
-									 type: 'radar',
-									 data: {
-									   labels: ["행복", "사랑", "우울", "애증", "신남"],
-									   datasets: [
-										 {
-										   label: "선택 곡",
-										   fill: true,
-										   backgroundColor: "rgba(179,181,198,0.2)",
-										   borderColor: "rgba(179,181,198,1)",
-										   pointBorderColor: "#fff",
-										   pointBackgroundColor: "rgba(179,181,198,1)",
-										   data: [8.77,55.61,21.69,6.62,6.82]
-										 }, {
-										   label: "추천 곡",
-										   fill: true,
-										   backgroundColor: "rgba(255,99,132,0.2)",
-										   borderColor: "rgba(255,99,132,1)",
-										   pointBorderColor: "#fff",
-										   pointBackgroundColor: "rgba(255,99,132,1)",
-										   pointBorderColor: "#fff",
-										   data: [25.48,54.16,7.61,8.06,4.45]
-										 }
-									   ]
-									 },
-									 options: {
-										 responsive: false,
-											 maintainAspectRatio: false,
-									   title: {
-										 display: true 
-									   }
-									 }
-								 });
- 
-								 </script>
+								<!--차트-->
+								<canvas id="radar-chart" width="700" height="500"></canvas>
+								<script>
+									new Chart(document.getElementById("radar-chart"), {
+										type: 'radar',
+										data: {
+										labels: ["행복", "사랑", "우울", "애증", "신남"],
+										datasets: [
+										{
+											label: "선택 곡",
+											fill: true,
+											backgroundColor: "rgba(179,181,198,0.2)",
+											borderColor: "rgba(179,181,198,1)",
+											pointBorderColor: "#fff",
+											pointBackgroundColor: "rgba(179,181,198,1)",
+											data: [8.77,55.61,21.69,6.62,6.82]
+										}, {
+											label: "추천 곡",
+											fill: true,
+											backgroundColor: "rgba(255,99,132,0.2)",
+											borderColor: "rgba(255,99,132,1)",
+											pointBorderColor: "#fff",
+											pointBackgroundColor: "rgba(255,99,132,1)",
+											pointBorderColor: "#fff",
+											data: [25.48,54.16,7.61,8.06,4.45]
+										}
+										]
+										},
+										options: {
+										responsive: false,
+										maintainAspectRatio: false,
+										title: {
+										display: true 
+										}
+									}
+								});
+								</script>
 							</a>
 						</div>
 						<h2 class="content-sub-heading">감정분석 유사도</h2>
-						<p>유사한 곡 중 1-3위를 추천해주고, 해당가수의 관련영상을 추천해드립니다.</p>
+						<p>유사한 곡 중 1-5위를 추천해주고, 해당가수의 관련영상을 추천해드립니다.</p>
             <div class="row text-center">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
@@ -364,12 +363,23 @@
                         </div> 
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
                         <div class="team-img">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/iDjQSdN_ig8?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <img class="img-responsive" src="../css/images/team/03.jpg" alt="">
                         </div>
                         <div class="team-info">
+                            <h3>유사도 5위</h3>
+                            <span>가수이름</span> </br>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                        <div class="team-img">
+							<iframe width="670" height="450" src="https://www.youtube.com/embed/iDjQSdN_ig8?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="team-info" align = "center">
                             <h3>YouTube</h3>
                             <span>해당가수의 관련 영상</span> 
                         </div> 
@@ -378,7 +388,7 @@
             </div>
 
         </div>
-    </section><!--/#our-team-->
+    </section>
 	</main>
 	<footer class="footer">
 		<div class="container">

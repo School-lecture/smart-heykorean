@@ -1,0 +1,43 @@
+
+{% load mathfilters %}
+
+{% block csslink %}
+<link href="/assets/css/login.css" rel="stylesheet" type="text/css">
+{% endblock%}
+
+{% block content %}
+
+<div class="wrap">
+<div class= "login" >
+	<h2>login</h2>
+            <div class="login_sns">
+            </div>
+	<form id="login-form" name="loginform" method="post" action="{% url 'user:login' %}">
+		{% csrf_token %}
+			<div class="login_id">
+                <h4>ID</h4>
+                <input id="id" name="id" type="text" value="" placeholder="ID">
+            </div>
+
+ 		<div class="login_pw">
+              <h4>Password</h4>
+              <input type="password" name="password"  placeholder="Password">
+        </div>
+
+		{% if request.GET.result == 'fail' %}
+		<p style="color: red;">
+			아이디와 비밀번호를 확인해주세요.
+		</p>
+		{% endif%}
+		  <div>
+              <a href='find_id.html'>아이디찾기</a>
+              <a href='find_pw.html'>비밀번호찾기</a>
+			  <a href='/user/joinform'>회원가입</a>
+
+			  <div class="submit">
+			<input type="submit" value="로그인">
+		</div>
+	    </div>
+	</form>
+</div>
+{% endblock%}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <title>Title</title>
+</head>
+<body>
+<div>
+<h1>하하하</h1>
+
+    {% for music in music_list %}
+        <p>{{ music.music_title }}</p>
+        <p>{{ music.music_lyrics }}</p>
+        <p>{{ music.music_genre}}</p>
+    {% endfor %}
+        <form id="sel" method="post">
+            {% csrf_token %}
+            <input type="text" id="mt">
+            <button type="button" onclick="sel_al()"> 확인 </button>
+        </form>
+
+        <p>{{ music.music_title }}</p>
+        <p>{{ music.music_lyrics }}</p>
+
+
+
+</div>
+<script>
+    function sel_al(e) {
+        let title = $('#mt').val();
+        console.log(title);
+        $.ajax({
+            url: "list_select",
+            data: {title:title},
+            method: "post",
+            dataType: "json",
+            success: function (){
+                console.log("성공");
+            },
+            error : function() {
+                console.log("error");}
+        });
+
+
+    }
+
+</script>
+
+
+
+</body>
+</html>

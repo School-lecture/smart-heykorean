@@ -25,9 +25,51 @@ class list_select(APIView):
         title = request.data.get('title')
         print(title)
         music_list1 = Music.objects.filter(music_title=title)
+
+        music_list = Music.objects.all()
+
+        for i in music_list:
+            print(music_list[i])
+
         print(music_list1)
-        queryset_json = serializers.serialize('json', music_list1)
-        return HttpResponse(queryset_json, content_type="application/json")
+        print(music_list1.values())
+        print(music_list1[0].music_title)
+
+        mtv = music_list1.values()
+
+
+        # queryset_json = serializers.serialize('json', music_list1)
+        # return HttpResponse(queryset_json, content_type="application/json")
+        return Response(mtv)
+
+
+
+# class list_same(APIView):
+#     def post(self, request):
+#         title = request.data.get('title')
+#         print(title)
+#
+#         music_list1 = Music.objects.filter(music_title=title)
+#
+#         music_list = Music.objects.all()
+#
+#         ml0 = music_list
+#         ml1 = music_list1
+
+    # for i in ml0:
+    #
+    #     if (ml1[0].music_nation != ml0[0].music_nation):
+    #         if (ml)
+
+
+
+
+
+
+
+        return Response(ml1)
+
+
 
 # def show_eng(request):
 #     input_val = request.GET.get('input_val')

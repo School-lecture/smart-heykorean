@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Jquery -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for event in event_list %}
+        <div>
+            <ul>
+                <li class="edata"> {{event.edate}} </li>
+                <li class="singer"> {{event.singer}} </li>
+                <li class="location"> {{event.location}} </li>
+                <li class="link"> {{event.link}} </li>
+                <button class="ad" >보내기</button>
+            </ul>
+        </div>
+        <br>
+    {% endfor %}
+
+
+
+
+<script>
+
+    $('.ad').click(function () {
+        alert("추가 클릭");
+
+        let event_data = $('.edata').val();
+        let singer = $('.singer').val();
+        let loca = $('.location').val();
+        let li = $('.link').val();
+
+        let fd = new FormData();
+
+        fd.append('event_data', event_data);
+        fd.append('singer', singer);
+        fd.append('loca', loca);
+        fd.append('li', li);
+
+        $.ajax({
+            url: "/add",
+            data: fd,
+            method: "POST",
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                console.log("성공");
+            },
+            error: function (request, status, error) {
+                console.log("에러");
+            },
+            complete: function () {
+                console.log("완료");
+                {#location.replace("/main");#}
+            }
+        });
+    });
+
+</script>
+
+</body>
+
+</html>

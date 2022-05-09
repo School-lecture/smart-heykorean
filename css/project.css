@@ -9,7 +9,7 @@ body {
   background-size: cover;
   margin-bottom: -58px;
   padding-top: 68px;
-  padding-bottom: 58px;
+  padding-bottom: 750px;
   z-index: 0;
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 .page-brand .content-heading {
-  background-image: url(./images/bg/amber.jpg);
+  background-image: url(./images/bg/main.jpg);
 }
 
 .ui-card-pre {

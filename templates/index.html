@@ -7,17 +7,20 @@
 	<title>감정분석 기반 나만의 음악 추천, hey-korean</title>
 
 	<!-- css -->
-	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="../css/base.css" rel="stylesheet">
 
 	<!-- css for doc -->
-	<link href="../css/project.min.css" rel="stylesheet">
+	<link href="../css/project.css" rel="stylesheet">
 
 	<link href="../css/main.css" rel="stylesheet">
 	<!-- favicon -->
 	<!-- ... -->
 </head>
 <body class="page-brand">
-	<header class="header header-transparent header-waterfall">
+	<header class="header header-transparent header-waterfall" style="background-image:url('../css/images/bg/main.jpg'); background-size:cover;">
+		<!-- <span style="text-align : center;">
+			<img src="../css/images/bg/main.jpg">
+		</span> -->
 		<ul class="nav nav-list pull-left">
 			<li>
 				<a data-toggle="menu" href="#doc_menu">
@@ -98,7 +101,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
-						<h1 class="heading">hey-korean</h1>
+						<!-- <h1 class="heading">hey-korean</h1> -->
 					</div>
 				</div>
 			</div>
@@ -111,7 +114,7 @@
 							<div class="card-main" align="center">
 								<div class="card-inner" >
 									<blockquote>원하시는 곡을 선택하세요.</blockquote>
-									
+
 									<div id="my_modal">
 										<table class="table custom-table">
 											<thead>
@@ -137,7 +140,7 @@
 														<small class="d-block">Far far away</small>
 													</td>
 												</tr>
-						
+
 												<tr class="spacer">
 													<td colspan="100"></td>
 												</tr>
@@ -153,7 +156,7 @@
 														Graphic Designer
 														<small class="d-block">Far far away</small>
 													</td>
-						
+
 													<tr class="spacer">
 														<td colspan="100"></td>
 													</tr>
@@ -171,7 +174,7 @@
 															<small class="d-block">Far far away, behind the word mountains</small>
 														</td>
 													</tr>
-						
+
 												</table>
 												<button type="submit">선택</button>
 												<a class="modal_close_btn">닫기</a>
@@ -182,11 +185,11 @@
 											<tr>
 												 <td><img src="../css/images/IU.jpg" alt="선택한노래" width="200" height="200"></td>
 												 <td rowspan="3">
-												 
+
 													 <button id="popup_open_btn" type="button">노래선택</button>
 													 <button id="popup_open_btn" type="submit"> 매칭 </button>
 													 <button id="popup_open_btn" type="submit">담기</button>
-												 
+
 												 </td>
 												  <td><img src="../css/images/ANN.jpg" alt="결과노래" width="200" height="200"></td>
 											</tr>
@@ -264,7 +267,7 @@
 		function modal(id) {
 			var zIndex = 9999;
 			var modal = document.getElementById(id);
-			// 모달 div 뒤에 레이어         
+			// 모달 div 뒤에 레이어
 			var bg = document.createElement('div');
 			bg.setStyle({
 				position: 'fixed',
@@ -306,7 +309,7 @@
 
 		// Element 에 style 한번에 오브젝트로 설정하는 함수 추가
 		Element.prototype.setStyle = function (styles) {
-			for (var k in styles) 
+			for (var k in styles)
 				this.style[k] = styles[k];
 			return this;
 		};
@@ -325,7 +328,7 @@
 				cb.checked = false;
 			})
 			element.checked = true;
-		}                 
+		}
 	</script>
 </body>
 </html>

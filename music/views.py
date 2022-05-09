@@ -1,4 +1,6 @@
-from django.http import JsonResponse
+import json
+from django.core import serializers
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from rest_framework import request
 from rest_framework.response import Response
@@ -20,12 +22,12 @@ class List(APIView):
 
 class list_select(APIView):
     def post(self, request):
-        title1 = request.data.get('title')
-        print(title1)
-        music_list1 = Music.objects.filter(music_title=title1)
+        title = request.data.get('title')
+        print(title)
+        music_list1 = Music.objects.filter(music_title=title)
         print(music_list1)
-
-        return render(request, 'music/music.html', context=dict(music_list1=music_list1))
+        queryset_json = serializers.serialize('json', music_list1)
+        return HttpResponse(queryset_json, content_type="application/json")
 
 # def show_eng(request):
 #     input_val = request.GET.get('input_val')

@@ -8,7 +8,7 @@
 </head>
 <body>
 <div>
-<h1>하하하</h1>
+<h1>gjkfdgjk</h1>
 
     {% for music in music_list %}
         <p>{{ music.music_title }}</p>
@@ -20,9 +20,9 @@
             <input type="text" id="mt">
             <button type="button" onclick="sel_al()"> 확인 </button>
         </form>
-
-        <p>{{ music.music_title }}</p>
-        <p>{{ music.music_lyrics }}</p>
+        <p id="mmt">d</p>
+        <p></p>
+        <p></p>
 
 
 
@@ -36,8 +36,20 @@
             data: {title:title},
             method: "post",
             dataType: "json",
-            success: function (){
+            success: function (data) {
                 console.log("성공");
+                console.log(data);
+                {#var keys = Object.keys(data);#}
+                {#for (var i=0; i<keys.length; i++){#}
+                {#    var key = keys[i];#}
+                {#    console.log("key : " + key + ", value : " + data[key])#}
+
+
+                console.log(JSON.stringify(data));
+                data1 = JSON.stringify(data);
+
+                $("#mmt").html(data["music_title"]);
+
             },
             error : function() {
                 console.log("error");}

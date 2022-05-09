@@ -20,6 +20,7 @@ class List(APIView):
 #         list_select = Music.objects.filter(music_title='music_title')
 #         return render(request, context=dict(list_select=list_select))
 
+
 class list_select(APIView):
     def post(self, request):
         title = request.data.get('title')
@@ -28,15 +29,13 @@ class list_select(APIView):
 
         music_list = Music.objects.all()
 
-        for i in music_list:
+        for i in range(0, len(music_list)):
             print(music_list[i])
 
         print(music_list1)
         print(music_list1.values())
         print(music_list1[0].music_title)
-
         mtv = music_list1.values()
-
 
         # queryset_json = serializers.serialize('json', music_list1)
         # return HttpResponse(queryset_json, content_type="application/json")
@@ -44,17 +43,35 @@ class list_select(APIView):
 
 
 
-# class list_same(APIView):
-#     def post(self, request):
-#         title = request.data.get('title')
-#         print(title)
-#
-#         music_list1 = Music.objects.filter(music_title=title)
-#
-#         music_list = Music.objects.all()
-#
-#         ml0 = music_list
-#         ml1 = music_list1
+class list_same(APIView):
+    def post(self, request):
+        title = request.data.get('title')
+        music_list1 = Music.objects.filter(music_title=title)
+        music_list = Music.objects.all()
+
+        ml0 = music_list
+        ml1 = music_list1
+
+        print(ml0)
+        print(ml1)
+
+        for i in range(0, len(ml0)):
+            sum = 0
+            print(ml0[i])
+            print(sum)
+            if (ml1[0].music_nation != ml0[i].music_nation):
+                if (ml1[0].music_genre) == ml0[i].music_genre:
+                    sum = (abs(ml1[0].senti1-ml0[i].senti1)+abs(ml1[0].senti2-ml0[i].senti2)+
+                           abs(ml1[0].senti3-ml0[i].senti3)+abs(ml1[0].senti4-ml0[i].senti4)+
+                           abs(ml1[0].senti5-ml0[i].senti5))
+                    print(sum)
+
+        return Response(sum)
+
+
+
+
+
 
     # for i in ml0:
     #

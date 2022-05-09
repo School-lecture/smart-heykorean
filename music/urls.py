@@ -15,9 +15,10 @@ Including another URLconf
 """
 
 from django.urls import path
-from music.views import list_select
+from music.views import list_select, list_same
 
 urlpatterns = [
     path('list_select', list_select.as_view(), name='list_select'),
+    path('list_same', list_same.as_view(), name='list_same'),
 
 ]

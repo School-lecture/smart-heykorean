@@ -2,62 +2,100 @@
 <html lang="en">
 <head>
     <!-- Jquery -->
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+
+<div>
+    <h1>오늘 {{ event_list.0.first }}</h1>
+    {% with list='' %}
+        {% for number in list.split %}
+            {{ number }}<br/>
+        {% endfor %}
+    {% endwith %}
+
     {% for event in event_list %}
-        <div>
-            <ul>
-                <li class="edata"> {{event.edate}} </li>
-                <li class="singer"> {{event.singer}} </li>
-                <li class="location"> {{event.location}} </li>
-                <li class="link"> {{event.link}} </li>
-                <button class="ad" >보내기</button>
-            </ul>
-        </div>
-        <br>
+
+         {% csrf_token %}
+        <span id="jjj{{ event.id }}">{{ event.id }} </span>
+        <span>{{ event.edate }} </span>
+        <span>{{ event.singer }} </span>
+        <span>{{ event.location }} </span>
+        <span>{{ event.link }} </span>
+        <button type="button" onclick="go({{ event.id }})" class="btn">{{ event.id }}</button>
+        <br><br>
+
     {% endfor %}
 
 
+</div>
+<div>
+    <input type="text" class="title" >
+    <input type="text" class="content" >
+    <input type="button" class="btnAjax" value="TEST">
+</div>
 
 
 <script>
+    function go(num) {
+        let id = document.querySelector('#jjj' + num).textContent;
+        alert(id);
 
-    $('.ad').click(function () {
-        alert("추가 클릭");
+        let param = {
+          'id': id,
+        }
 
-        let event_data = $('.edata').val();
-        let singer = $('.singer').val();
-        let loca = $('.location').val();
-        let li = $('.link').val();
 
-        let fd = new FormData();
-
-        fd.append('event_data', event_data);
-        fd.append('singer', singer);
-        fd.append('loca', loca);
-        fd.append('li', li);
+        {#let btn = document.querySelector(".btn");#}
+        {##}
+        {#btn.addEventListener('click', e => {#}
+        {#let id = "11111";#}
+        {##}
+        {#        let id = document.querySelector('#jjj').textContent;#}
 
         $.ajax({
-            url: "/add",
-            data: fd,
-            method: "POST",
-            processData: false,
-            contentType: false,
+            url: '{% url 'test' %}',
+            type: 'post',
+            headers: {
+                'X-CSRFTOKEN': '{{ csrf_token }}'
+            },
+            data: JSON.stringify(param),
             success: function (data) {
-                console.log("성공");
+                console.log(data)
             },
-            error: function (request, status, error) {
-                console.log("에러");
-            },
-            complete: function () {
-                console.log("완료");
-                {#location.replace("/main");#}
+            error: function () {
+                alert('안댐')
             }
+        });
+    }
+
+
+    let btnAjax = document.querySelector('.btnAjax');
+
+    btnAjax.addEventListener('click', e => {
+        let title = document.querySelector('.title').value;
+        let content = document.querySelector('.content').value;
+        let param = {
+          'title': title,
+          'content' : content,
+        }
+        $.ajax({
+           url : '{% url 'test' %}',
+           type : 'post',
+           headers:{
+             'X-CSRFTOKEN' : '{{ csrf_token }}'
+           },
+           data : JSON.stringify(param),
+           success:function (data){
+             console.log(data)
+           },
+           error:function (){
+               alert('안댐')
+           }
         });
     });
 

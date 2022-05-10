@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Jquery -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <h1>Music List Add</h1>
+
+    {% for music in music_list %}
+        {% csrf_token %}
+        <span id="choice{{music.music_num }}">{{ music.music_num }}</span>
+        <span>{{ music.title }}</span>
+        <span>{{ music.music_singer }}</span>
+        <button type="button" onclick="go({{ music.music_num }})" class="btn">선택</button>
+        <br><br>
+
+    {% endfor %}
+
+</div>
+
+<script>
+    function go(num) {
+        let music_num = document.querySelector('#choice' + num).textContent;
+        alert(music_num);
+
+        let param = {
+          'music_num': music_num,
+        }
+
+        $.ajax({
+            url: '{% url 'plistadd' %}',
+            type: 'post',
+            headers: {
+                'X-CSRFTOKEN': '{{ csrf_token }}'
+            },
+            data: JSON.stringify(param),
+            success: function (data) {
+                console.log(data)
+            },
+            error: function () {
+                alert('안댐')
+            }
+        });
+    }
+
+
+</script>
+
+</body>
+
+</html>

@@ -15,13 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from smartapp.views import Calender, Eboard, Add
+from smartapp.views import Calender, Eboard, Add, Main, Cal, Musiclist
 from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('main/', Calender.as_view()),
     path('eboard/', Eboard.as_view()),
-    path('add', Add.as_view())
-
+    path('starta', Add.as_view()),
+    path('test/', views.test, name='test'),
+    path('main2/', Main.as_view()),
+    path('main3/', Cal.as_view()),
+    path('musiclist', Musiclist.as_view()),
+    path('plistadd/', views.plistadd, name='plistadd'),
 ]

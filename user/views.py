@@ -19,8 +19,7 @@ def index(request):
 def main(request):
     return render(request, 'main/main.html')
 
-def cal(request):
-    return render(request, 'cal/daygrid-views.html')
+
 
 def join(request):
     user = User()
@@ -92,4 +91,7 @@ def calendar(request):
 
     return HttpResponse(data, content_type="text/json-comment-filtered")
 
+
+def cal(request):
+    return render(request, 'cal/daygrid-views.html')
 

@@ -70,12 +70,11 @@
             dataType: "json",
             success: function (data) {
                 console.log("성공");
-
                 console.log(data);
 
-                $("#mmt").html(data);
-                $("#mml").html(data);
-                $("#mmy").html(data);
+                $("#mmt").html(      data['title1'][0],axis=1    );
+                $("#mml").html(data['title1'][1],axis=1 );
+                $("#mmy").html(data['title1'][2],axis=1 );
             },
             error : function() {
                 console.log("error");}

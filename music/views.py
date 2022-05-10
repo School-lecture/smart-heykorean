@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from music.models import Music
 # Create your views here.
-
+import pandas as pd
 
 class List(APIView):
     def get(self, request):
@@ -54,9 +54,22 @@ class list_same(APIView):
 
         print(ml0)
         print(ml1)
+        data = {
+            'title1': [],
+            'same' : []
+
+        }
+        frame = pd.DataFrame(data)
+        print(frame)
+
+
+
+
 
         for i in range(0, len(ml0)):
+
             sum = 0
+
             print(ml0[i])
             print(sum)
             if (ml1[0].music_nation != ml0[i].music_nation):
@@ -65,8 +78,23 @@ class list_same(APIView):
                            abs(ml1[0].senti3-ml0[i].senti3)+abs(ml1[0].senti4-ml0[i].senti4)+
                            abs(ml1[0].senti5-ml0[i].senti5))
                     print(sum)
+                    frame.loc[len(frame)] = [(ml0[i].music_title), sum]
 
-        return Response(sum)
+                else :
+                    frame.loc[len(frame)] = [(ml0[i].music_title), 1000]
+            else :
+                frame.loc[len(frame)] = [(ml0[i].music_title), 1000]
+
+
+
+        frame = frame.sort_values('same')
+
+
+        print(frame)
+
+
+
+        return Response(frame)
 
 
 
@@ -77,15 +105,6 @@ class list_same(APIView):
     #
     #     if (ml1[0].music_nation != ml0[0].music_nation):
     #         if (ml)
-
-
-
-
-
-
-
-        return Response(ml1)
-
 
 
 # def show_eng(request):

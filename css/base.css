@@ -1550,10 +1550,7 @@ template,
   font-style: normal;
   font-weight: 400;
   src: url("./fonts/MaterialIcons-Regular.eot?v=2.2.0");
-  src: local("Material Icons"), 
-  local("MaterialIcons-Regular"), 
-  url("./fonts/MaterialIcons-Regular.woff2?v=2.2.0") format("woff2"), 
-  url("./fonts/MaterialIcons-Regular.woff?v=2.2.0") format("woff"), url("./fonts/MaterialIcons-Regular.ttf?v=2.2.0") format("truetype");
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("./fonts/MaterialIcons-Regular.woff2?v=2.2.0") format("woff2"), url("./fonts/MaterialIcons-Regular.woff?v=2.2.0") format("woff"), url("./fonts/MaterialIcons-Regular.ttf?v=2.2.0") format("truetype");
 }
 .icon, .breadcrumb > li + li:before {
   display: inline-block;
@@ -1575,7 +1572,6 @@ template,
   word-wrap: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 .icon-2x {
@@ -1597,8 +1593,7 @@ template,
 .icon-lg {
   font-size: 1.4em;
   vertical-align: -20%;
-  color: black; 
-  
+  color: black;
 }
 @media only screen and (min--moz-device-pixel-ratio: 0) {
   .icon-lg {
@@ -6355,4 +6350,3 @@ div[data-toggle="tile"] [data-ignore="tile"] {
     width: 240px;
   }
 }
-

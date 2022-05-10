@@ -56,15 +56,19 @@ class list_same(APIView):
         print(ml1)
         data = {
             'title1': [],
-            'same' : []
+            'music_path': [],
+            'image_path': [],
+            'youtube_path': [],
+            'senti1': [],
+            'senti2': [],
+            'senti3': [],
+            'senti4': [],
+            'senti5': [],
+            'same': []
 
         }
         frame = pd.DataFrame(data)
         print(frame)
-
-
-
-
 
         for i in range(0, len(ml0)):
 
@@ -78,12 +82,24 @@ class list_same(APIView):
                            abs(ml1[0].senti3-ml0[i].senti3)+abs(ml1[0].senti4-ml0[i].senti4)+
                            abs(ml1[0].senti5-ml0[i].senti5))
                     print(sum)
-                    frame.loc[len(frame)] = [(ml0[i].music_title), sum]
+                    frame.loc[len(frame)] = [(ml0[i].music_title),(ml0[i].music_path),
+                                             (ml0[i].image_path),(ml0[i].youtube_path),
+                                             (ml0[i].senti1),(ml0[i].senti2),
+                                            (ml0[i].senti3),(ml0[i].senti4),
+                                             (ml0[i].senti5),sum]
 
                 else :
-                    frame.loc[len(frame)] = [(ml0[i].music_title), 1000]
+                    frame.loc[len(frame)] = [(ml0[i].music_title),(ml0[i].music_path),
+                                             (ml0[i].image_path),(ml0[i].youtube_path),
+                                             (ml0[i].senti1),(ml0[i].senti2),
+                                           (ml0[i].senti3),(ml0[i].senti4),
+                                             (ml0[i].senti5),1000]
             else :
-                frame.loc[len(frame)] = [(ml0[i].music_title), 1000]
+                frame.loc[len(frame)] = [(ml0[i].music_title),(ml0[i].music_path),
+                                             (ml0[i].image_path),(ml0[i].youtube_path),
+                                             (ml0[i].senti1),(ml0[i].senti2),
+                                           (ml0[i].senti3),(ml0[i].senti4),
+                                             (ml0[i].senti5),1000]
 
 
 

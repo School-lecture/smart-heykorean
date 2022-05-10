@@ -61,7 +61,7 @@ li {
     height: 50px;
     border: 0;
     outline: none;
-    background: linear-gradient(to left, rgb(255, 77, 46), rgb(255, 155, 47));
+    background-color: rgb(255, 155, 47);
     color: rgb(255, 255, 255);
     font-size: 1.2em;
     letter-spacing: 2px;

@@ -1,5 +1,8 @@
 from django.urls import path
 from . import views
+from rest_framework.views import APIView
+
+from .views import list_select, list_same, Musiclist
 
 app_name = 'user'
 
@@ -22,5 +25,13 @@ urlpatterns = [
     # 이벤트 달력
     path('calp', views.calp, name='calp'),
     path('calendar', views.calendar, name='calendar'),
+
+    # 음악
+    path('list_select', list_select.as_view(), name='list_select'),
+    path('list_same', list_same.as_view(), name='list_same'),
+
+
+    path('plistadd/', views.plistadd, name='plistadd'),
+    path('Musiclist', Musiclist.as_view(), name='Musiclist'),
 
 ]

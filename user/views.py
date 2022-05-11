@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import request
-from user.models import User, Event, UserMusic,UserPlaylist
+from user.models import User, Event,UserMusic, UserPlaylist
 import pandas as pd
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt

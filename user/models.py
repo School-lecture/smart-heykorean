@@ -44,6 +44,7 @@ class UserMusic(models.Model):
         db_table = 'user_music'
 
 
+
 class UserPlaylist(models.Model):
     playlist_num = models.IntegerField(primary_key=True)
     id = models.TextField()

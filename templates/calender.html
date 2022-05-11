@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- jquery link -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            padding: 5vh 5vw;
+            color: #37474f;
+            line-height: 1.5;
+            font-family: Lato, sans-serif;
+            background-color: #cfd8dc;
+        }
+
+        .note {
+            font-size: calc(0.5vw + 0.75rem);
+            text-align: center;
+            opacity: 0.5;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5em 1em;
+            color: #fff;
+            font-weight: bold;
+            font-size: 0.6875em;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.0625em;
+            background-color: tomato;
+            border-radius: 1.5em;
+            cursor: pointer;
+        }
+
+        .calendar-wrap {
+            width: 100%;
+            padding: 0.75em;
+            margin: auto;
+            font-size: 4vw;
+            background-color: #fff;
+            border-radius: 1.5em;
+            user-select: none;
+            box-shadow: 0 0.0625em 0.25em rgba(0, 20, 50, 0.2),
+            0 0.5em 0.5em 0.125em rgba(0, 20, 50, 0.1);
+        }
+
+        @media (min-width: 500px) {
+            .calendar-wrap {
+                width: 700px;
+                font-size: 2rem;
+            }
+        }
+
+        .month-year {
+            margin-bottom: 0.75em;
+            font-weight: normal;
+            font-size: 1.25em;
+            text-align: center;
+        }
+
+        .calendar {
+            table-layout: fixed;
+            width: 100%;
+            margin-bottom: 0.75em;
+            overflow: hidden;
+            border-collapse: collapse;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .day-title {
+            width: 4em;
+            height: 4em;
+            vertical-align: top;
+            font-weight: bold;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 0.0625em;
+            box-shadow: inset 0 -0.875em #fff,
+            inset 0 -1em rgba(0, 20, 50, 0.1);
+        }
+
+        .day {
+            position: relative;
+            height: 3em;
+        }
+
+        .day:focus {
+            outline: none;
+        }
+
+        .day:focus .day-number::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            height: 80%;
+            transform: translate(-50%, -50%);
+            border: 0.25em solid #0288d1;
+            border-radius: 50%;
+        }
+
+        .day.active-a:focus .day-number::after,
+        .day.active-b:focus .day-number::after {
+            width: 100%;
+            height: 100%;
+        }
+
+        .day.today:focus .day-number::after {
+            width: 102%;
+            height: 102%;
+        }
+
+        .day:hover span.day-number {
+            color: #0288d1;
+        }
+
+        .day:first-child,
+        .day:last-child {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .day.range {
+            color: #0288d1;
+            background-color: #e1f5fe;
+        }
+
+        .day.range.active-a,
+        .day:not(.range) + .day.range.active-b {
+            background-color: transparent;
+            box-shadow: inset -1.5em 0 #e1f5fe;
+        }
+
+        .day.range.active-b,
+        .day.range + .day.range.active-a {
+            background-color: transparent;
+            box-shadow: inset 1.5em 0 #e1f5fe;
+        }
+
+        .day.range.active-a:first-child,
+        .day.range.active-b:first-child {
+            box-shadow: none;
+        }
+
+        .day.range.active-a:first-child + .day.range,
+        .day.range.active-b:first-child + .day.range {
+            box-shadow: -1.5em 0 #e1f5fe;
+        }
+
+        .day.range.active-a:first-child + .day:not(.range),
+        .day.range.active-b:first-child + .day:not(.range) {
+            box-shadow: -4.5em 0 #e1f5fe;
+        }
+
+        .day.range.active-a:first-child + .day.range.active-b {
+            box-shadow: -1.5em 0 #e1f5fe,
+            inset 1.5em 0 #e1f5fe;
+        }
+
+        .day-number {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3em;
+            border-radius: 50%;
+        }
+
+        .day.active-a span.day-number,
+        .day.active-b span.day-number {
+            color: #fff;
+            background-color: #03A9F4;
+        }
+
+        .day.prev-mon .day-number,
+        .day.next-mon .day-number {
+            color: rgba(0, 0, 0, 0.3);
+        }
+
+        .day.prev-mon[class*="active"] .day-number,
+        .day.next-mon[class*="active"] .day-number {
+            color: rgba(255, 255, 255, 0.5);
+            background-color: #81D4FA;
+        }
+
+        .day.today span.day-number {
+            color: #fff;
+            border: 0.25em solid transparent;
+            box-shadow: inset 0 0 0 2em tomato;
+        }
+
+        .calendar-wrap .reset {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="calendar-wrap">
+    <h2 class="month-year">2022년 05월</h2>
+
+    <table class="calendar">
+        <thead>
+        <tr>
+            <th class="day-title" scope="col">Sun</th>
+            <th class="day-title" scope="col">Mon</th>
+            <th class="day-title" scope="col">Tue</th>
+            <th class="day-title" scope="col">Wed</th>
+            <th class="day-title" scope="col">Thu</th>
+            <th class="day-title" scope="col">Fri</th>
+            <th class="day-title" scope="col">Sat</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="week">
+            <td class="day prev-mon" tabindex="0"><span class="day-number">29</span></td>
+            <td class="day prev-mon" tabindex="0"><span class="day-number">30</span></td>
+            <td class="day prev-mon" tabindex="0"><span class="day-number">31</span></td>
+            <td class="day" tabindex="0"><span class="day-number">1</span></td>
+            <td class="day" tabindex="0"><span class="day-number">2</span></td>
+            <td class="day" tabindex="0"><span class="day-number">3</span></td>
+            <td class="day" tabindex="0"><span class="day-number">4</span></td>
+        </tr>
+        <tr class="week">
+            <td class="day" tabindex="0"><span class="day-number">5</span></td>
+            <td class="day" tabindex="0"><span class="day-number">6</span></td>
+            <td class="day" tabindex="0"><span class="day-number">7</span></td>
+            <td class="day" tabindex="0"><span class="day-number">8</span></td>
+            <td class="day" tabindex="0"><span class="day-number">9</span></td>
+            <td class="day" tabindex="0"><span class="day-number">10</span></td>
+            <td class="day" tabindex="0"><span class="day-number">11</span></td>
+        </tr>
+        <tr class="week">
+            <td class="day" tabindex="0"><span class="day-number">12</span></td>
+            <td class="day" tabindex="0"><span class="day-number">13</span></td>
+            <td class="day" tabindex="0"><span class="day-number">14</span></td>
+            <td class="day" tabindex="0"><span class="day-number">15</span></td>
+            <td class="day" tabindex="0"><span class="day-number">16</span></td>
+            <td class="day" tabindex="0"><span class="day-number">17</span></td>
+            <td class="day" tabindex="0"><span class="day-number">18</span></td>
+        </tr>
+        <tr class="week">
+            <td class="day" tabindex="0"><span class="day-number">19</span></td>
+            <td class="day" tabindex="0"><span class="day-number">20</span></td>
+            <td class="day" tabindex="0"><span class="day-number">21</span></td>
+            <td class="day" tabindex="0"><span class="day-number">22</span></td>
+            <td class="day" tabindex="0"><span class="day-number">23</span></td>
+            <td class="day" tabindex="0"><span class="day-number">24</span></td>
+            <td class="day" tabindex="0"><span class="day-number">25</span></td>
+        </tr>
+        <tr class="week">
+            <td class="day" tabindex="0"><span class="day-number">26</span></td>
+            <td class="day" tabindex="0"><span class="day-number">27</span></td>
+            <td class="day" tabindex="0"><span class="day-number">28</span></td>
+            <td class="day" tabindex="0"><span class="day-number">29</span></td>
+            <td class="day" tabindex="0"><span class="day-number">30</span></td>
+            <td class="day next-mon" tabindex="0"><span class="day-number">1</span></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <a id="event_button" href="/eboard" class="button reset">이번달 콘서트일정 확인하기</a>
+</div>
+<script>
+
+    /* calendar built with the tutorial from https://liginc.co.jp/355474 */
+    var $window = $(window);
+    var $month = $('#js-month');
+    var $tbody = $('#js-calendar-body');
+
+    var today = new Date();
+    var currentYear = today.getFullYear(),
+        currentMonth = today.getMonth();
+
+    $window.on('load', function () {
+        calendarHeading(currentYear, currentMonth);
+        calendarBody(currentYear, currentMonth, today);
+    });
+
+    function calendarBody(year, month, today) {
+        var todayYMFlag = today.getFullYear() === year && today.getMonth() === month ? true : false;
+        var startDate = new Date(year, month, 1);
+        var endDate = new Date(year, month + 1, 0);
+        var startDay = startDate.getDay();
+        var endDay = endDate.getDate();
+        var textSkip = true;
+        var textDate = 1;
+        var tableTd = '';
+        var tableBody = '';
+
+        for (var row = 0; row < 6; row++) {
+            var tr = '<tr>';
+
+            for (var col = 0; col < 7; col++) {
+                if (row === 0 && startDay === col) {
+                    textSkip = false;
+                }
+                if (textDate > endDay) {
+                    textSkip = true;
+                }
+                var addClass = todayYMFlag && textDate === today.getDate() && !textSkip ? 'is-today' : '';
+                var textTd = textSkip ? '&nbsp;' : textDate++;
+                var td = '<td class="' + addClass + '">' + textTd + '</td>';
+                tr += td;
+            }
+            tr += '</tr>';
+            tableBody += tr;
+        }
+        $tbody.html(tableBody);
+    }
+
+    function calendarHeading(year, month) {
+        $month.text(month + 1);
+    }
+</script>
+</body>
+</html>

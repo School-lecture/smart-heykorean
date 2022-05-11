@@ -2,9 +2,15 @@ from django.core import serializers
 from django.forms import model_to_dict
 from django.http import HttpResponseRedirect, JsonResponse, HttpResponse
 from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
-
-from user.models import User, Event
+from rest_framework import request
+from user.models import User, Event, UserMusic,UserPlaylist
+import pandas as pd
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
 
 
 def joinform(request):
@@ -98,3 +104,119 @@ def calp(request):
 
 def loginform(request) :
     return render(request, 'user/loginform.html')
+#-----------------------------------------------------------------------
+
+class Musiclist(APIView):
+    def get(self, request):
+        music_list = UserMusic.objects.all().order_by('music_num')
+        return render(request, 'main/main.html', {'music_list': music_list})
+
+@csrf_exempt
+def plistadd(request):
+    jsonObject = json.loads(request.body)
+    print(jsonObject.get('music_num'))
+    music_num = jsonObject.get('music_num')
+
+    kmusic = UserMusic.objects.filter(music_num=music_num)
+
+
+    senti1 = kmusic[0].senti1
+    senti2 = kmusic[0].senti2
+    senti3 = kmusic[0].senti3
+    senti4 = kmusic[0].senti4
+    senti5 = kmusic[0].senti5
+
+    pmusic = UserMusic.objects.filter(senti1=senti1)
+
+    pop = pmusic[0].music_num
+    UserPlaylist.objects.create(id=1, music_num=pop,
+                            playlist_name=1)
+
+    return JsonResponse(jsonObject)
+#=======================================================================
+
+
+class list_select(APIView):
+    def post(self, request):
+        title = request.data.get('title')
+        print(title)
+        music_list1 = UserMusic.objects.filter(music_title=title)
+
+        music_list = UserMusic.objects.all()
+
+        for i in range(0, len(music_list)):
+            print(music_list[i])
+
+        print(music_list1)
+        print(music_list1.values())
+        print(music_list1[0].music_title)
+        mtv = music_list1.values()
+
+        # queryset_json = serializers.serialize('json', music_list1)
+        # return HttpResponse(queryset_json, content_type="application/json")
+        return Response(mtv)
+
+
+class list_same(APIView):
+    def post(self, request):
+        title = request.data.get('title')
+        music_list1 = UserMusic.objects.filter(music_title=title)
+        music_list = UserMusic.objects.all()
+
+        ml0 = music_list
+        ml1 = music_list1
+
+        print(ml0)
+        print(ml1)
+        data = {
+            'title1': [],
+            'music_path': [],
+            'image_path': [],
+            'youtube_path': [],
+            'senti1': [],
+            'senti2': [],
+            'senti3': [],
+            'senti4': [],
+            'senti5': [],
+            'same': []
+
+        }
+        frame = pd.DataFrame(data)
+        print(frame)
+
+        for i in range(0, len(ml0)):
+
+            sum = 0
+
+            print(ml0[i])
+            print(sum)
+            if (ml1[0].music_nation != ml0[i].music_nation):
+                if (ml1[0].music_genre) == ml0[i].music_genre:
+                    sum = (abs(ml1[0].senti1-ml0[i].senti1)+abs(ml1[0].senti2-ml0[i].senti2)+
+                           abs(ml1[0].senti3-ml0[i].senti3)+abs(ml1[0].senti4-ml0[i].senti4)+
+                           abs(ml1[0].senti5-ml0[i].senti5))
+                    print(sum)
+                    frame.loc[len(frame)] = [(ml0[i].music_title),(ml0[i].music_path),
+                                             (ml0[i].image_path),(ml0[i].youtube_path),
+                                             (ml0[i].senti1),(ml0[i].senti2),
+                                            (ml0[i].senti3),(ml0[i].senti4),
+                                             (ml0[i].senti5),sum]
+
+                else :
+                    frame.loc[len(frame)] = [(ml0[i].music_title),(ml0[i].music_path),
+                                             (ml0[i].image_path),(ml0[i].youtube_path),
+                                             (ml0[i].senti1),(ml0[i].senti2),
+                                           (ml0[i].senti3),(ml0[i].senti4),
+                                             (ml0[i].senti5),1000]
+            else :
+                frame.loc[len(frame)] = [(ml0[i].music_title),(ml0[i].music_path),
+                                             (ml0[i].image_path),(ml0[i].youtube_path),
+                                             (ml0[i].senti1),(ml0[i].senti2),
+                                           (ml0[i].senti3),(ml0[i].senti4),
+                                             (ml0[i].senti5),1000]
+
+        frame = frame.sort_values('same')
+
+        print(frame)
+
+        return Response(frame)

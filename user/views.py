@@ -86,9 +86,11 @@ def checkID(request):
 def calendar(request):
     cal = Event.objects.all()
 
-    data = serializers.serialize('json', cal)
+    context = {
+        "events":cal,
+    }
 
-    return HttpResponse(data, content_type="text/json-comment-filtered")
+    return render(request, 'cal/daygrid-views.html', context)
 
 
 def calp(request):

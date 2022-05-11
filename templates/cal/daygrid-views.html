@@ -4,6 +4,13 @@
 <meta charset='utf-8' />
 <link href='/assets/lib/main.css' rel='stylesheet' />
 <script src='/assets/lib/main.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -19,12 +26,15 @@
       editable: true,
       dayMaxEvents: true, // allow "more" link when too many events
       events: [
-        $.ajax({
-          type:"POST",
-          url:'{% url calendar %}',
-          dataType:'json',
-          data
-        })
+         {% for event in events %}
+                        {
+                            title: "{{ event.name}}",
+                            start: '{{ event.start|date:"Y-m-d" }}',
+                            end: '{{ event.end|date:"Y-m-d" }}',
+                            id: '{{ event.id }}',
+                        },
+                    {% endfor %}
+
       ]
     });
 

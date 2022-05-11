@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils import timezone
 # Create your models here.
 class User(models.Model):
     id = models.CharField(primary_key=True, max_length=30)
@@ -22,3 +22,35 @@ class Event(models.Model):
     class Meta:
         managed = False
         db_table = 'event'
+
+class UserMusic(models.Model):
+    music_num = models.IntegerField(primary_key=True)
+    music_title = models.TextField()
+    music_singer = models.TextField()
+    music_lyrics = models.TextField()
+    music_nation = models.TextField()
+    music_path = models.TextField()
+    image_path = models.TextField()
+    youtube_path = models.TextField()
+    senti1 = models.IntegerField()
+    senti2 = models.IntegerField()
+    senti3 = models.IntegerField()
+    senti4 = models.IntegerField()
+    senti5 = models.IntegerField()
+    music_genre = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'user_music'
+
+
+class UserPlaylist(models.Model):
+    playlist_num = models.IntegerField(primary_key=True)
+    id = models.TextField()
+    music_num = models.TextField()
+    playlist_name = models.TextField()
+    playlist_date = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'user_playlist'

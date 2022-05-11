@@ -101,8 +101,6 @@ class list_same(APIView):
                                            (ml0[i].senti3),(ml0[i].senti4),
                                              (ml0[i].senti5),1000]
 
-
-
         frame = frame.sort_values('same')
 
 

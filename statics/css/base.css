@@ -1593,6 +1593,7 @@ template,
 .icon-lg {
   font-size: 1.4em;
   vertical-align: -20%;
+  color: black;
 }
 @media only screen and (min--moz-device-pixel-ratio: 0) {
   .icon-lg {

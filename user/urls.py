@@ -20,7 +20,7 @@ urlpatterns = [
     path('index', views.index, name ='index'),
     path('main', views.main, name ='main'),
     # 이벤트 달력
-
+    path('calp', views.calp, name='calp'),
     path('calendar', views.calendar, name='calendar'),
-    path('cal', views.cal, name= 'cal'),
+
 ]

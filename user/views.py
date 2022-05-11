@@ -83,7 +83,6 @@ def checkID(request):
     }
     return JsonResponse(result)
 
-
 def calendar(request):
     cal = Event.objects.all()
 
@@ -92,6 +91,8 @@ def calendar(request):
     return HttpResponse(data, content_type="text/json-comment-filtered")
 
 
-def cal(request):
+def calp(request):
     return render(request, 'cal/daygrid-views.html')
 
+def loginform(request) :
+    return render(request, 'user/loginform.html')

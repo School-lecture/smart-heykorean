@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Jquery -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <h1>오늘 {{ event_list.0.first }}</h1>
+    {% with list='' %}
+        {% for number in list.split %}
+            {{ number }}<br/>
+        {% endfor %}
+    {% endwith %}
+
+    {% for event in event_list %}
+
+         {% csrf_token %}
+        <span id="jjj{{ event.id }}">{{ event.id }} </span>
+        <span>{{ event.edate }} </span>
+        <span>{{ event.singer }} </span>
+        <span>{{ event.location }} </span>
+        <span>{{ event.link }} </span>
+        <button type="button" onclick="go({{ event.id }})" class="btn">{{ event.id }}</button>
+        <br><br>
+
+    {% endfor %}
+
+
+</div>
+<div>
+    <input type="text" class="title" >
+    <input type="text" class="content" >
+    <input type="button" class="btnAjax" value="TEST">
+</div>
+
+
+<script>
+    function go(num) {
+        let id = document.querySelector('#jjj' + num).textContent;
+        alert(id);
+
+        let param = {
+          'id': id,
+        }
+
+
+        {#let btn = document.querySelector(".btn");#}
+        {##}
+        {#btn.addEventListener('click', e => {#}
+        {#let id = "11111";#}
+        {##}
+        {#        let id = document.querySelector('#jjj').textContent;#}
+
+        $.ajax({
+            url: '{% url 'test' %}',
+            type: 'post',
+            headers: {
+                'X-CSRFTOKEN': '{{ csrf_token }}'
+            },
+            data: JSON.stringify(param),
+            success: function (data) {
+                console.log(data)
+            },
+            error: function () {
+                alert('안댐')
+            }
+        });
+    }
+
+
+    let btnAjax = document.querySelector('.btnAjax');
+
+    btnAjax.addEventListener('click', e => {
+        let title = document.querySelector('.title').value;
+        let content = document.querySelector('.content').value;
+        let param = {
+          'title': title,
+          'content' : content,
+        }
+        $.ajax({
+           url : '{% url 'test' %}',
+           type : 'post',
+           headers:{
+             'X-CSRFTOKEN' : '{{ csrf_token }}'
+           },
+           data : JSON.stringify(param),
+           success:function (data){
+             console.log(data)
+           },
+           error:function (){
+               alert('안댐')
+           }
+        });
+    });
+
+</script>
+
+</body>
+
+</html>

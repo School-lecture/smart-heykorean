@@ -7,16 +7,40 @@
 	<title>감정분석 기반 나만의 음악 추천, hey-korean</title>
 
 	<!-- css -->
-	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="static/css/base.min.css" rel="stylesheet">
 
 	<!-- css for doc -->
-    <link href="../css/user.css" rel="stylesheet">
+	<link href="static/css/project.min.css" rel="stylesheet">
+    <link href="static/css/user.css" rel="stylesheet">
 
 	<!-- favicon -->
 	<!-- ... -->
 
 </head>
 <body class="page-brand">
+	<header class="header header-transparent header-waterfall">
+		<ul class="nav nav-list pull-right">
+			<li class="dropdown margin-right">
+				<a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
+					<span class="access-hide">John Smith</span>
+					<!-- 로그인 정보 아이콘 -->
+					<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="../images/users/avatar-001.jpg"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a class="padding-right-lg waves-attach" href="#"><span class="icon icon-lg margin-right">account_box</span>내 정보</a>
+					</li>
+					<li>
+						<a class="padding-right-lg waves-attach" href="#"><span class="icon icon-lg margin-right">add_to_photos</span>음악추가하기</a>
+					</li>
+					<li>
+						<a class="padding-right-lg waves-attach" href="#"><span class="icon icon-lg margin-right">exit_to_app</span>Logout</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</header>
+
 	<main class="content">
 		<div class="content-heading">
 			<div class="container">
@@ -82,9 +106,9 @@
 
 	<!-- js -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script src="../js/base.min.js"></script>
+	<script src="static/js/base.min.js"></script>
 
 	<!-- js for doc -->
-	<script src="../js/project.min.js"></script>
+	<script src="static/js/project.min.js"></script>
 </body>
 </html>

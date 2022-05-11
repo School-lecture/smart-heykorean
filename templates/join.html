@@ -7,11 +7,11 @@
 	<title>감정분석 기반 나만의 음악 추천, hey-korean</title>
 
 	<!-- css -->
-	<link href="../css/base.min.css" rel="stylesheet">
+	<link href="static/css/base.min.css" rel="stylesheet">
 
 	<!-- css for doc -->
 
-    <link href="../css/user.css" rel="stylesheet">
+    <link href="static/css/user.css" rel="stylesheet">
 
 	<!-- favicon -->
 	<!-- ... -->
@@ -29,26 +29,26 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 col-lg-push-3 col-sm-8 col-sm-push-2">
+				<div class="col-lg-6 col-lg-push-3 col-sm-8 col-sm-push-2">
 					<section class="content-inner margin-top-no">
 						<div class="card">
 							<div class="card-main">
 								<div class="card-inner" >
-                                    
-                                    <form>
+									<form>
                                     <div class="join">
                                         <div class="join_id">
                                             <label for="name">이름</label> 
                                             <input type="text" name="name" id="input" autofocus required placeholder="이름을 입력하세요."></br></br>
 											
-										<div class="join_check">
 											<label for="id">아이디</label>
-												<input class="idChecking" id="id" name="id" type="text" value="" placeholder="아이디" > <button class="check">중복체크</button>								
-                                        </div>   
-
-                                            <label for="pw">비밀번호</label> 
-                                            <input type="password" name="pw"  class="" placeholder="비밀번호를 입력하세요." required></br></br>
-                                            
+											<div class="id_area">
+												<input id="id" name="id" type="text" value="" placeholder="아이디" > 
+												<button class="id_check">중복체크</button>								
+                                        	</div>   
+											<div class="pw-area">
+											<label for="pw">비밀번호</label> 
+                                            	<input type="password" name="pw"  class="" placeholder="비밀번호를 입력하세요." required></br></br>
+											</div>
                                             <label for="pw2">비밀번호확인</label> 
                                             <input type="password" name="pw2" class="" placeholder="비밀번호를 동일하게 입력하세요." required></br></br>
                                             
@@ -59,10 +59,10 @@
                                                     <option value="gender" selected>성별을 선택해주세요</option>
                                                     <option value="female">여</option>
                                                     <option value="male">남</option>
-                                            </select><br><br>
+                                            </select>
                                         </div>
-                                        <div class="submit">
-                                            <input type="submit" value="가입하기" onclick="location.href='index.html'">
+                                        <div class="join_submit">
+                                            <input type="submit" value="가입하기">
                                         </div>
                                     </div>
                                     </form>
@@ -94,9 +94,9 @@
 
 	<!-- js -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script src="../js/base.min.js"></script>
+	<script src="static/js/base.min.js"></script>
 
 	<!-- js for doc -->
-	<script src="../js/project.min.js"></script>
+	<script src="static/js/project.min.js"></script>
 </body>
 </html>

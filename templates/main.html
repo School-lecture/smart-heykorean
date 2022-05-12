@@ -15,7 +15,8 @@
 	<link href="../css/music.css" rel="stylesheet">
 	<link href="../css/main.css" rel="stylesheet">
 	<!-- favicon -->
-	<!-- ... -->
+	<!-- js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </head>
 <body class="page-brand">
 	<header class="header header-transparent header-waterfall">
@@ -35,12 +36,6 @@
 					<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="../images/users/avatar-001.jpg"></span>
 				</a>
 				<ul class="dropdown-menu">
-					<li>
-						<a class="padding-right-lg waves-attach" href="#"><span class="icon icon-lg margin-right">account_box</span>내 정보</a>
-					</li>
-					<li>
-						<a class="padding-right-lg waves-attach" href="#"><span class="icon icon-lg margin-right">add_to_photos</span>음악추가하기</a>
-					</li>
 					<li>
 						<a class="padding-right-lg waves-attach" href="#"><span class="icon icon-lg margin-right">exit_to_app</span>Logout</a>
 					</li>
@@ -174,146 +169,217 @@
 		</div>
 	</nav>
 	<main class="content">
-		<div class="content-heading">
+		<div class="content-heading" style="margin-top: 60px;">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
-						<h1 class="heading">hey-korean</h1>
+					<div class="col-sm-12">
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-7 col-lg-push-3 col-sm-10 col-sm-push-1">
+				<div class="col-lg-10 col-lg-push-1 col-sm-10 col-sm-push-3">
 					<section class="content-inner margin-top-no">
 						<div class="card">
 							<div class="card-main" align="center">
+								<h3 class="content-sub-heading">매칭 할 곡을 선택하고 노래선택 버튼을 눌러주세요.</h3>
 								<div class="card-inner" >
-									<blockquote>원하시는 곡을 선택하세요.</blockquote>
-									
-									<div id="my_modal">
-										<table class="table custom-table">
-											<thead>
-												<tr>
-													<th scope="col"></th>
-													<th scope="col"></th>
-													<th scope="col">가수</th>
-													<th scope="col">노래</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr scope="row">
-													<th scope="row">
-														<label class="control control--checkbox">
-															<input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
-															<div class="control__indicator"></div>
-														</label>
-													</th>
-													<td>1</td>
-													<td>James Yates</td>
-													<td>
-														Web Designer
-														<small class="d-block">Far far away</small>
-													</td>
-												</tr>
-						
-												<tr class="spacer">
-													<td colspan="100"></td>
-												</tr>
-													<th scope="row">
-														<label class="control control--checkbox">
-															<input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
-															<div class="control__indicator"></div>
-														</label>
-													</th>
-													<td>2</td>
-													<td>Matthew Wasil</td>
-													<td>
-														Graphic Designer
-														<small class="d-block">Far far away</small>
-													</td>
-						
-													<tr class="spacer">
-														<td colspan="100"></td>
-													</tr>
-													<tr>
-														<th scope="row">
-															<label class="control control--checkbox">
-																<input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
-																<div class="control__indicator"></div>
-															</label>
-														</th>
-														<td>3</td>
-														<td>Sampson</td>
-														<td>
-															Mobile Dev
-															<small class="d-block">Far far away, behind the word mountains</small>
-														</td>
-													</tr>
-						
-												</table>
-												<button type="submit">선택</button>
-												<a class="modal_close_btn">닫기</a>
-											</div>
-											<!-- 모달창 -->
-									<div align = "center">
-										<table>
+									<div class="tbl-header">
+										<table cellpadding="0" cellspacing="0" border="0">
+										  <thead>
 											<tr>
-												<td><img src="../css/images/IU.jpg" alt="선택한노래" width="200" height="200"></td>
-												<td rowspan="3">												
-													<button id="popup_open_btn" type="button">노래선택</button>
-													<button id="popup_open_btn" type="submit"> 매칭 </button>
-													<button id="popup_open_btn" type="submit">담기</button>												
-												</td>
-												<td><img src="../css/images/ANN.jpg" alt="결과노래" width="200" height="200"></td>
+											  <th></th>
+											  <th>가수</th>
+											  <th>노래</th>
 											</tr>
-											<tr>
-												<td>가수</td>
-												<td>가수</td>
-											</tr>
-											<tr>
-												<td>제목</td>
-												<td>제목</td>
-											</tr>
+										  </thead>
 										</table>
-									</div>
+									  </div>
+									<div class="tbl-content">
+										<table >
+										  <tbody>
+											<tr>
+												<td>
+													<label class="control control--checkbox">
+													<input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
+													<div class="control__indicator"></div>
+													</label>
+											  	</td>
+											  <td>James Yates</td>
+											  <td>Web Designer</td>
+											</tr>
+									
+											<td>
+											  <label class="control control--checkbox">
+												<input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
+												<div class="control__indicator"></div>
+											  </label>
+											</td>
+											<td>Matthew Wasil</td>
+											<td>Graphic Designer</td>
+									
+											<tr>
+											  <td>
+												<label class="control control--checkbox">
+												  <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
+												  <div class="control__indicator"></div>
+												</label>
+											  </td>
+											  <td>Sampson</td>
+											  <td>Mobile Dev</td>
+											</tr>
+									
+											<tr>
+											  <td>
+												<label class="control control--checkbox">
+												  <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
+												  <div class="control__indicator"></div>
+												</label>
+											  </td>
+											  <td>Sampson</td>
+											  <td>Mobile Dev</td>
+											</tr>
+									
+											<tr>
+											  <td>
+												<label class="control control--checkbox">
+												  <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
+												  <div class="control__indicator"></div>
+												</label>
+											  </td>
+											  <td>Sampson</td>
+											  <td>Mobile Dev</td>
+											</tr>
+									
+											<tr>
+											  <td>
+												<label class="control control--checkbox">
+												  <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
+												  <div class="control__indicator"></div>
+												</label>
+											  </td>
+											  <td>Sampson</td>
+											  <td>Mobile Dev</td>
+											</tr>
+									
+											<tr>
+											  <td>
+												<label class="control control--checkbox">
+												  <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
+												  <div class="control__indicator"></div>
+												</label>
+											  </td>
+											  <td>Sampson</td>
+											  <td>Mobile Dev</td>
+											</tr>
+									
+											<tr>
+											  <td>
+												<label class="control control--checkbox">
+												  <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
+												  <div class="control__indicator"></div>
+												</label>
+											  </td>
+											  <td>Sampson</td>
+											  <td>Mobile Dev</td>
+											</tr>
+										  </tbody>
+										</table>
+									  </div>
+
+									<button id="popup_open_btn" type="submit">노래선택</button>
 									<p>사용방법을 잘 모르시겠다면 <a href="#" target="_blank">여기<sup class="margin-left-xs"><span class="icon">open_in_new</span></sup></a> 를 클릭하세요.</p>
 								</div>
 							</div>
 						</div>
-						<h2 class="content-sub-heading">분석비교결과</h2>
-						<p>원하시는 매칭곡과 유사도가 가장 높은 결과를 보여주고, 유사곡 리스트를 확인할 수 있습니다.　　 <a href="#" target="_blank">더 많은 결과 확인하기<sup class="margin-left-xs"><span class="icon">open_in_new</span></sup></a>.</p>
-						<div class="tile-wrap">
-							<a class="tile waves-attach" href="#">
-								<div class="tile-inner">
-									<span class="text-black">Buttons</span>
+
+
+						<h2 class="content-sub-heading">감정유사도 1위</h2>
+						<div class="card-inner" >
+								<div class="tile-inner" align = "center">
+									<table>
+										<tr>
+											<td><img src="../css/images/IU.jpg" alt="선택한노래" width="350" height="350"></td>
+											<td rowspan="3"><button id="popup_open_btn" type="submit">매칭</button></td>
+											<td><img src="../css/images/ANN.jpg" alt="결과노래" width="350" height="350"></td>
+										</tr>
+										<tr>
+											<td>가수 - 제목</td>
+											<td><input type="checkbox"><span>가수 - 제목</span></td>
+										</tr>
+									</table>
+									<button id="popup_open_btn" type="submit">담기</button>																	
 								</div>
-							</a>
+						</div>
+
+
+					</br></br>
+						<h2 class="content-sub-heading">감정분석결과</h2>
+						<div class="tile-wrap">
+								<div class="tile-inner" align="center">
+								<!--차트-->
+								<canvas id="radar-chart" width="550" height="550"></canvas>					
 						</div>
 						<h2 class="content-sub-heading">감정분석 유사도</h2>
-						<p>유사한 곡 중 1-3위를 추천해주고, 해당가수의 관련영상을 추천해드립니다.</p>
-						<div class="tile-wrap">
-							<a class="tile waves-attach" href="#">
-								<div class="tile-inner">
-									<span class="text-black">1위</span>
-								</div>
-							</a>
-							<a class="tile waves-attach" href="#">
-								<div class="tile-inner">
-									<span class="text-black">2위</span>
-								</div>
-							</a>
-							<a class="tile waves-attach" href="#">
-								<div class="tile-inner">
-									<span class="text-black">3위</span>
-								</div>
-							</a>
-						</div>
-					</section>
-				</div>
-			</div>
-		</div>
+						<p>유사한 곡 중 2-5위를 추천해주고, 해당가수의 관련영상을 추천해드립니다.</p>
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-member wow fadeInUp">
+                        <div class="team-img">
+                            <img class="img-responsive" src="../css/images/team/1.5.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>유사도 2위</h3>
+                            <span>가수이름</span> 
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-member wow fadeInUp">
+                        <div class="team-img">
+                            <img class="img-responsive" src="../css/images/team/02.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>유사도 3위</h3>
+                            <span>가수이름</span> 
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-member wow fadeInUp">
+                        <div class="team-img">
+                            <img class="img-responsive" src="../css/images/team/03.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>유사도 4위</h3>
+                            <span>가수이름</span> 
+                        </div> 
+                    </div>
+                </div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-member wow fadeInUp">
+                        <div class="team-img">
+                            <img class="img-responsive" src="../css/images/team/03.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>유사도 5위</h3>
+                            <span>가수이름</span>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-md-13 col-sm-12 col-xs-14">
+					
+					<h3>YouTube</h3>
+					<span>해당가수의 관련 영상</span> </br>
+				
+					<iframe width="670" height="450" src="https://www.youtube.com/embed/iDjQSdN_ig8?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					
+                </div>
+            </div>
+
+        </div>
+    </section>
 	</main>
 	<footer class="footer">
 		<div class="container">
@@ -331,71 +397,7 @@
 		</div>
 	</div>
 
-	<!-- js -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script src="../js/base.min.js"></script>
-
-	<!-- js for doc -->
-	<script src="../js/project.min.js"></script>
-
 	<script>
-		function modal(id) {
-			var zIndex = 9999;
-			var modal = document.getElementById(id);
-			// 모달 div 뒤에 레이어         
-			var bg = document.createElement('div');
-			bg.setStyle({
-				position: 'fixed',
-				zIndex: zIndex,
-				left: '0px',
-				top: '0px',
-				width: '100%',
-				height: '100%',
-				overflow: 'auto',
-				// 레이어 색은 여기서 바꾸면 됨
-				backgroundColor: 'rgba(0,0,0,0.4)'
-			});
-			document
-				.body
-				.append(bg);
-
-			// 닫기 버튼 처리, 레이어와 모달 div 지우기
-			modal
-				.querySelector('.modal_close_btn')
-				.addEventListener('click', function () {
-					bg.remove();
-					modal.style.display = 'none';
-				});
-
-			modal.setStyle({
-				position: 'fixed', display: 'block', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-
-				// 시꺼먼 레이어 보다 한칸 위에 보이기
-				zIndex: zIndex + 1,
-
-				// div center 정렬
-				top: '50%',
-				left: '50%',
-				transform: 'translate(-50%, -50%)',
-				msTransform: 'translate(-50%, -50%)',
-				webkitTransform: 'translate(-50%, -50%)'
-			});
-		}
-
-		// Element 에 style 한번에 오브젝트로 설정하는 함수 추가
-		Element.prototype.setStyle = function (styles) {
-			for (var k in styles) 
-				this.style[k] = styles[k];
-			return this;
-		};
-
-		document
-			.getElementById('popup_open_btn')
-			.addEventListener('click', function () {
-				// 모달창 띄우기
-				modal('my_modal');
-			});
-
 		// checkbox 중복방지
 		function checkOnlyOne(element) {
 			const checkboxes = document.getElementsByName("song");
@@ -406,6 +408,49 @@
 		}                 
 	</script>
 
-<script src="../assets/js/music.js"></script>
+<script>
+	new Chart(document.getElementById("radar-chart"), {
+		type: 'radar',
+		data: {
+		labels: ["행복", "사랑", "우울", "애증", "신남"],
+		datasets: [
+		{
+			label: "선택 곡",
+			fill: true,
+			backgroundColor: "rgba(179,181,198,0.2)",
+			borderColor: "rgba(179,181,198,1)",
+			pointBorderColor: "#fff",
+			pointBackgroundColor: "rgba(179,181,198,1)",
+			data: [8.77,55.61,21.69,6.62,6.82]
+		}, {
+			label: "추천 곡",
+			fill: true,
+			backgroundColor: "rgba(255,99,132,0.2)",
+			borderColor: "rgba(255,99,132,1)",
+			pointBorderColor: "#fff",
+			pointBackgroundColor: "rgba(255,99,132,1)",
+			pointBorderColor: "#fff",
+			data: [25.48,54.16,7.61,8.06,4.45]
+		}
+		]
+		},
+		options: {
+		responsive: false,
+		maintainAspectRatio: false,
+		title: {
+		display: true 
+		}
+	}
+});
+</script>
+	
+
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="../js/base.min.js"></script>
+
+	<!-- js for doc -->
+	<script src="../js/project.min.js"></script>
+	<script src="../assets/js/music.js"></script>
 </body>
 </html>

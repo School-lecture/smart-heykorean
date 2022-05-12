@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<!-- 화면 해상도에 따라 글자 크기 대응(모바일 대응) -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<!-- jquery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<title>감정분석 기반 나만의 음악 추천, hey-korean</title>
+<!-- css -->
+<link href="/assets/css/base.min.css" rel="stylesheet">
+<link href="/assets/css/styles.css" rel="stylesheet" >
+	<!-- css for doc -->
+<link href="/assets/css/project.min.css" rel="stylesheet">
+<link href="/assets/css/music.css" rel="stylesheet">
+<link href="/assets/css/main.css" rel="stylesheet">
+<!-- favicon -->
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<style>
+		 .col-sm-12 {
+        padding-left: 47%;
+        padding-top: 230px;
+        position: absolute;
+        width: 100%;
+     }
+
+     .btn-primary{
+        width: 200px;
+        border: 1px solid white;
+        text-decoration: none;
+        color: white;
+        padding: 20px 50px 20px 50px;
+        font-size:20px;
+     }
+     .btn-primary:hover{
+        color:tomato;
+        text-decoration: none;
+        background-color: rgba(231, 231, 231, 0.329);
+     }
+		 .icon-lg {
+			 font-size: 1.4em;
+			 vertical-align: -20%;
+			 color: white;
+		 }
+
+		 .header-logo, .header-text, .menu-logo {
+    display: block;
+    float: left;
+    font-weight: 300;
+    height: 48px;
+    line-height: 28px;
+    margin: 0 16px;
+    padding: 10px 5px 15px 15px;
+    white-space: nowrap;
+}
+</style>
+
+
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo margin-left-no" href="index.html"><img src="/assets/css/images/logo.png"></a>
+	</header>
+
+	<!--start버튼-->
+	<main class="content">
+		<div class="content-heading" style="margin-top: 75px;">
+            <div class="row">
+                <div class="col-sm-12">
+                        <a class="btn-primary" href="loginform">START</a>
+                </div>
+            </div>
+		</main>
+			<div class="container">
+				<div class="row">
+					</div>
+				</div>
+
+				<section id="services" >
+					<div class="container">
+
+						<div class="section-header">
+							<h2 class="section-title wow fadeInDown" >감정분석 음악 매칭</h2>
+							<p class="wow fadeInDown">원하시는 곡을 선택하세요. 해외곡과 매칭해드립니다.</p>
+						</div>
+								<div class="images" >
+										<div class="pull-left">
+										</div>
+										<img class="img" src="/assets/images/users/매칭.png" alt="">
+								  </div>
+					</div><!--/.container-->
+				</section><!--/#services-->
+
+
+			 <section id="about">
+					<div class="container">
+
+						<div class="section-header">
+							<h2 class="section-title wow fadeInDown" >분석비교 결과</h2>
+							<p class="wow fadeInDown"> 매칭한 곡의 감정분석 결과를 보여줍니다.</p>
+						</div>
+							<div class="images" data-wow-duration="300ms" data-wow-delay="300ms">
+							  <img class="img-responsive" src="/assets/images/users/about.png" alt="" >
+							</div>
+					</div>
+				</section><!--/#about-->
+
+				 <section id="our-team">
+					<div class="container">
+						<div class="section-header">
+							<h2 class="section-title wow fadeInDown" >감정분석 유사도</h2>
+			<p class="wow fadeInDown">K-POP 과 가장 유사한 곡중 1-3위를 추천해주고, 해당가수의 관련 동영상을 연결해줍니다.</p>
+						</div>
+
+						<div class="row text-center">
+							<div class="col-md-3 col-sm-6 col-xs-12" style="padding-left: 0px;">
+								<div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+									<div class="team-img"  style="padding-left: 50px;">
+										<img class="img-responsive" src="/assets/images/users/1.5.jpg" alt="">
+									</div>
+									<div class="team-info" >
+										<h3>유사도 2위</h3>
+										<span>Adele</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-12" style="padding-left: 0px;">
+								<div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+									<div class="team-img" style="padding-left: 50px;">
+										<img class="img-responsive" src="/assets/images/users/02.jpg" alt="">
+									</div>
+									<div class="team-info">
+										<h3>유사도 3위</h3>
+										<span>Rihanna</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-12" style="padding-left: 0px;">
+								<div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+									<div class="team-img" style="padding-left: 50px;">
+										<img class="img-responsive" src="/assets/images/users/03.jpg" alt="">
+									</div>
+									<div class="team-info">
+										<h3>유사도 4위</h3>
+										<span>Ariana Grande</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-12" style="padding-left: 0px;">
+								<div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+									<div class="team-img" style="padding-left: 50px;">
+										<img class="img-responsive" src="/assets/images/users/04.jpg" alt="">
+									</div>
+									<div class="team-info">
+										<h3>YouTube</h3>
+										<span>해당가수의 관련 영상</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section><!--/#our-team-->
+
+<!--footer-->
+	<footer class="footer">
+		<div class="container">
+			<p>hey-korean</p>
+		</div>
+	</footer>
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-amber3-accent waves-attach waves-circle waves-light" data-toggle="dropdown"><span class="fbtn-text">Links</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropdown">
+				<a class="fbtn waves-attach waves-circle" href="#" target="_blank"><span class="fbtn-text">Fork me on GitHub</span><span class="icon">code</span></a>
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light" href="#" target="_blank"><span class="fbtn-text">Follow Daemon on Twitter</span><span class="icon">share</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle" href="#" target="_blank"><span class="fbtn-text">Website</span><span class="icon">link</span></a>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="/assets/js/base.min.js"></script>
+
+	<!-- js for doc -->
+	<script src="/assets/js/project.min.js"></script>
+
+
+
+<script src="/assets/assets2/js/music.js"></script>
+</body>
+</html>

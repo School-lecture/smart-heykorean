@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	{% block csslink %}
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>감정분석 기반 나만의 음악 추천, hey-korean</title>
+
+	<!-- css -->
+	<link href="/assets/css/base.min.css" rel="stylesheet">
+
+	<!-- css for doc -->
+	<link href="/assets/css/project.min.css" rel="stylesheet">
+	<link href="/assets/css/user.css" rel="stylesheet" type="text/css">
+	<!-- favicon -->
+	<!-- ... -->
+	{% endblock %}
+</head>
+
+{% if request.GET.result == 'success' %}
+<script>
+	alert('정보 수정이 완료되었습니다.')
+</script>
+{% endif %}
+
+<body class="page-brand">
+   <header class="header header-transparent header-waterfall">
+      <ul class="nav nav-list pull-right">
+         <li class="dropdown margin-right">
+            <a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
+               <span class="access-hide">John Smith</span>
+               <!-- 로그인 정보 아이콘 -->
+               <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="/assets/images/users/avatar-001.jpg"></span>
+            </a>
+            <ul class="dropdown-menu">
+               <li>
+                  <a class="padding-right-lg waves-attach" href="#"><span class="icon icon-lg margin-right">account_box</span>내 정보</a>
+               </li>
+               <li>
+                  <a class="padding-right-lg waves-attach" href="#"><span class="icon icon-lg margin-right">add_to_photos</span>음악추가하기</a>
+               </li>
+               <li>
+                  <a class="padding-right-lg waves-attach" href="./index"><span class="icon icon-lg margin-right">exit_to_app</span>Logout</a>
+               </li>
+            </ul>
+         </li>
+      </ul>
+   </header>
+
+<main class="content">
+      <div class="content-heading">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-5 col-lg-push-2 col-sm-8 col-sm-push-1">
+                  <h1 class="heading">내 정보</h1>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-5 col-lg-push-3 col-sm-8 col-sm-push-2">
+               <section class="content-inner margin-top-no">
+                  <div class="card">
+                     <div class="card-main">
+                        <div class="card-inner" >
+							 <div class="find">
+                                            <div class="join_id">
+                                                <h5>내 정보 수정</h5>
+
+	<form id="join-form" name="joinForm" method="post" action="{% url 'user:update' %}">
+		{% csrf_token %}
+		<label for = "password" >비밀번호</label>
+		<input id = "password" name="password" type="password" value="" placeholder="이름을 입력해주세요"><br><br>
+
+		<label  for="name">이름</label>
+		<input id="name" name="name" type="text" value="{{ user.name }}"><br><br>
+
+
+
+		<fieldset>
+			<legend>성별</legend>
+			{% if user.gender == 'female' %}
+				<label>여</label> <input type="radio" name="gender" value="female" checked="checked">
+				<label>남</label> <input type="radio" name="gender" value="male">
+			{% else %}
+				<label>여</label> <input type="radio" name="gender" value="female">
+				<label>남</label> <input type="radio" name="gender" value="male" checked="checked">
+			{% endif %}
+		</fieldset>
+
+		<label for = "phone_num">전화번호</label>
+		<input id="phone_num" name="phone_num" type="text" value="{{ user.phone_num }}" placeholder="전화번호를 입력해주세요"><br><br>
+
+		<input type="submit" value="수정하기">
+	</form>
+
+</div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+   </main>
+
+<footer class="footer">
+      <div class="container">
+         <p>hey-korean</p>
+      </div>
+   </footer>
+   <div class="fbtn-container">
+      <div class="fbtn-inner">
+         <a class="fbtn fbtn-lg fbtn-amber-accent waves-attach waves-circle waves-light" data-toggle="dropdown"><span class="fbtn-text">Links</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+         <div class="fbtn-dropdown">
+            <a class="fbtn waves-attach waves-circle" href="#" target="_blank"><span class="fbtn-text">Fork me on GitHub</span><span class="icon">code</span></a>
+            <a class="fbtn fbtn-brand waves-attach waves-circle waves-light" href="#" target="_blank"><span class="fbtn-text">Follow Daemon on Twitter</span><span class="icon">share</span></a>
+            <a class="fbtn fbtn-green waves-attach waves-circle" href="#" target="_blank"><span class="fbtn-text">Website</span><span class="icon">link</span></a>
+         </div>
+      </div>
+   </div>
+
+   <!-- js -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+   <script src="/assets/js/base.min.js"></script>
+
+   <!-- js for doc -->
+   <script src="/assets/js/project.min.js"></script>
+</body>
+</html>

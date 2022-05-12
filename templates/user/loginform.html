@@ -32,7 +32,7 @@
 							<div class="card-main">
 								<div class="card-inner" >
                                     <div class="login">
-
+										<img class="img-responsive" src="/assets/css/images/logo.png">
                                         <div class="login_id">
 											<form id="login-form" name="loginform" method="post" action="{% url 'user:login' %}">
 												{% csrf_token %}
@@ -53,7 +53,8 @@
 
 										 <div class="login_etc">
                                                 <a href="./joinform">회원가입</a>
-                                            <div class="forgot_pw">
+											 	<a href="./joinform">아이디/비밀번호찾기</a>
+										 </div>
 
                                         <div class="login_submit">
                                            		<input type="submit" value="로그인">

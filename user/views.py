@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import request
-from user.models import User, Event,UserMusic, UserPlaylist
+from user.models import User, Event, UserMusic, UserPlaylist
 import pandas as pd
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -109,6 +109,7 @@ def loginform(request) :
 class Musiclist(APIView):
     def get(self, request):
         music_list = UserMusic.objects.all().order_by('music_num')
+        print(music_list)
         return render(request, 'main/main.html', {'music_list': music_list})
 
 @csrf_exempt

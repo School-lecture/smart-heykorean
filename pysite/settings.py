@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'user',
     'main',
     'mathfilters',
+    'playlist',
+    'music',
 
 ]
 

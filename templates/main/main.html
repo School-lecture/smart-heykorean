@@ -63,11 +63,10 @@
 						</button>
 
 						<div class="slider__content">
-							<img class="img slider__img" src="http://physical-authority.surge.sh/imgs/1.jpg" alt="cover">
-							<img class="img slider__img" src="http://physical-authority.surge.sh/imgs/2.jpg" alt="cover">
-							<img class="img slider__img" src="http://physical-authority.surge.sh/imgs/3.jpg" alt="cover">
-							<img class="img slider__img" src="http://physical-authority.surge.sh/imgs/4.jpg" alt="cover">
-							<img class="img slider__img" src="http://physical-authority.surge.sh/imgs/5.jpg" alt="cover">
+							{% for music in music_list %}
+							<img class="img slider__img" src="/assets/{{ music.image_path }}.jpg" alt="cover">
+
+							{% endfor %}
 						</div>
 					</div>
 
@@ -89,67 +88,29 @@
 				</div>
 
 					<ul class="player__playlist list">
+<!--						{% for l in list %}-->
+<!--                            <p>{{ l }}</p>-->
+<!--                        {% endfor %}-->
+
+<!--                        {% for play in play_list%}-->
+<!--                            <p>{{ play.playlist_num }}</p>-->
+
+<!--                        {% endfor %}-->
+
+                        {% for music in music_list %}
+
 						<li class="player__song">
-						<img class="player__img img" src="http://physical-authority.surge.sh/imgs/1.jpg" alt="cover">
+						<img class="player__img img" src="/assets/{{ music.image_path }}.jpg" alt="cover">
 						<p class="player__context">
-							<b class="player__song-name">Hero</b>
+							<b class="player__song-name">{{ music.music_title }}</b>
 							<span class="flex">
-							<span class="player__title">LUCY</span>
+							<span class="player__title">{{ music.music_singer }}</span>
 							<span class="player__song-time"></span>
 							</span>
 						</p>
-						<audio class="audio" src="y2mate.com - MV LUCY  Hero히어로.mp3"></audio>
+						<audio class="audio" src="/assets/{{ music.music_path }}.mp3"></audio>
 						</li>
-
-						<li class="player__song">
-						<img class="player__img img" src="http://physical-authority.surge.sh/imgs/2.jpg" alt="cover">
-						<p class="player__context">
-							<b class="player__song-name">blinding lights</b>
-							<span class="flex">
-							<span class="player__title">the weeknd</span>
-							<span class="player__song-time"></span>
-							</span>
-						</p>
-						<audio class="audio" src="http://physical-authority.surge.sh/music/2.mp3"></audio>
-						</li>
-
-						<li class="player__song">
-						<img class="player__img img" src="http://physical-authority.surge.sh/imgs/3.jpg" alt="cover">
-						<p class="player__context">
-							<b class="player__song-name">джованна</b>
-							<span class="flex">
-							<span class="player__title">enrasta</span>
-							<span class="player__song-time"></span>
-							</span>
-						</p>
-						<audio class="audio" src="http://physical-authority.surge.sh/music/3.mp3"></audio>
-					</li>
-
-					<li class="player__song">
-						<img class="player__img img" src="http://physical-authority.surge.sh/imgs/4.jpg" alt="cover">
-						<p class="player__context">
-						<b class="player__song-name">a man</b>
-						<span class="flex">
-							<span class="player__title">travis scott</span>
-							<span class="player__song-time"></span>
-						</span>
-						</p>
-						<audio class="audio" src="http://physical-authority.surge.sh/music/4.mp3"></audio>
-					</li>
-
-					<li class="player__song">
-						<img class="player__img img" src="http://physical-authority.surge.sh/imgs/5.jpg" alt="cover">
-						<p class="player__context ">
-						<b class="player__song-name">unforgetting</b>
-						<span class="flex">
-							<span class="player__title">zaxx</span>
-							<span class="player__song-time"></span>
-						</span>
-						</p>
-						<audio class="audio" src="http://physical-authority.surge.sh/music/5.mp3"></audio>
-					</li>
-
-
+						{% endfor %}
 					</ul>
 				</div>
 
@@ -201,97 +162,27 @@
 									<div class="tbl-content">
 										<table >
 										  <tbody>
+											{% for music in music_list %}
+     										{% csrf_token %}
 											<tr>
-												<td>
+												<td style="width: 10%">
 													<label class="control control--checkbox">
-													<input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
-													<div class="control__indicator"></div>
+														<input id="choice{{ music.music_num }}" type="checkbox"
+															   onclick='checkOnlyOne({{ music_num }})'/>
+														<div class="control__indicator"></div>
 													</label>
-											  	</td>
-											  <td>James Yates</td>
-											  <td>Web Designer</td>
+												</td>
+												<td>{{ music.music_singer }}</td>
+												<td>{{ music.music_title }}</td>
 											</tr>
+											{% endfor %}
 
-											<td>
-											  <label class="control control--checkbox">
-												<input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
-												<div class="control__indicator"></div>
-											  </label>
-											</td>
-											<td>Matthew Wasil</td>
-											<td>Graphic Designer</td>
-
-											<tr>
-											  <td>
-												<label class="control control--checkbox">
-												  <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
-												  <div class="control__indicator"></div>
-												</label>
-											  </td>
-											  <td>Sampson</td>
-											  <td>Mobile Dev</td>
-											</tr>
-
-											<tr>
-											  <td>
-												<label class="control control--checkbox">
-												  <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
-												  <div class="control__indicator"></div>
-												</label>
-											  </td>
-											  <td>Sampson</td>
-											  <td>Mobile Dev</td>
-											</tr>
-
-											<tr>
-											  <td>
-												<label class="control control--checkbox">
-												  <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
-												  <div class="control__indicator"></div>
-												</label>
-											  </td>
-											  <td>Sampson</td>
-											  <td>Mobile Dev</td>
-											</tr>
-
-											<tr>
-											  <td>
-												<label class="control control--checkbox">
-												  <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
-												  <div class="control__indicator"></div>
-												</label>
-											  </td>
-											  <td>Sampson</td>
-											  <td>Mobile Dev</td>
-											</tr>
-
-											<tr>
-											  <td>
-												<label class="control control--checkbox">
-												  <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
-												  <div class="control__indicator"></div>
-												</label>
-											  </td>
-											  <td>Sampson</td>
-											  <td>Mobile Dev</td>
-											</tr>
-
-											<tr>
-											  <td>
-												<label class="control control--checkbox">
-												  <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
-												  <div class="control__indicator"></div>
-												</label>
-											  </td>
-											  <td>Sampson</td>
-											  <td>Mobile Dev</td>
-											</tr>
 										  </tbody>
 										</table>
 									  </div>
-
-									<button id="popup_open_btn" type="submit">노래선택</button>
+									<button id="popup_open_btn" type="submit" onclick="sel_al()">노래선택</button>
 									<p>사용방법을 잘 모르시겠다면 <a href="#" target="_blank">여기<sup class="margin-left-xs"><span class="icon">open_in_new</span></sup></a> 를 클릭하세요.</p>
+
 								</div>
 							</div>
 						</div>
@@ -302,16 +193,16 @@
 								<div class="tile-inner" align = "center">
 									<table>
 										<tr>
-											<td><img src="../css/images/IU.jpg" alt="선택한노래" width="350" height="350"></td>
-											<td rowspan="3"><button id="popup_open_btn" type="submit">매칭</button></td>
-											<td><img src="../css/images/ANN.jpg" alt="결과노래" width="350" height="350"></td>
+											<td><img id = "img1" src="/assets/css/images/IU.jpg" alt="선택한노래" width="350" height="350"></td>
+											<td rowspan="3"><button id="popup_open_btn" type="submit" onclick="comp()">매칭</button></td>
+											<td><img id = "img2" src="/assets/css/images/ANN.jpg" alt="결과노래" width="350" height="350"></td>
 										</tr>
 										<tr>
-											<td>가수 - 제목</td>
-											<td><input type="checkbox"><span>가수 - 제목</span></td>
+											<td id="mmt">가수 - 제목</td>
+											<td id="mmt1">가수 - 제목</td>
 										</tr>
 									</table>
-									<button id="popup_open_btn" type="submit">담기</button>
+									<button id="popup_open_btn" type="submit" onclick="dam()">담기</button>
 								</div>
 						</div>
 
@@ -329,44 +220,44 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="team-member wow fadeInUp">
                         <div class="team-img">
-                            <img class="img-responsive" src="../css/images/team/1.5.jpg" alt="">
+                            <img id = "img3" class="img-responsive" src="/assets/css/images/team/1.5.jpg" alt="">
                         </div>
                         <div class="team-info">
                             <h3>유사도 2위</h3>
-                            <span>가수이름</span>
+                            <span id = "mmt2">가수이름</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="team-member wow fadeInUp">
                         <div class="team-img">
-                            <img class="img-responsive" src="../css/images/team/02.jpg" alt="">
+                            <img id = "img4" class="img-responsive" src="/assets/css/images/team/02.jpg" alt="">
                         </div>
                         <div class="team-info">
                             <h3>유사도 3위</h3>
-                            <span>가수이름</span>
+                            <span id = "mmt3">가수이름</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="team-member wow fadeInUp">
-                        <div class="team-img">
-                            <img class="img-responsive" src="../css/images/team/03.jpg" alt="">
+                       <div class="team-img">
+                            <img id = "img5" class="img-responsive" src="/assets/css/images/team/03.jpg" alt="">
                         </div>
                         <div class="team-info">
                             <h3>유사도 4위</h3>
-                            <span>가수이름</span>
+                            <span id = "mmt4">가수이름</span>
                         </div>
                     </div>
                 </div>
 				<div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="team-member wow fadeInUp">
                         <div class="team-img">
-                            <img class="img-responsive" src="../css/images/team/03.jpg" alt="">
+                            <img id = "img6" class="img-responsive" src="/assets/css/images/team/03.jpg" alt="">
                         </div>
                         <div class="team-info">
                             <h3>유사도 5위</h3>
-                            <span>가수이름</span>
+                            <span id = "mmt5">가수이름</span>
                         </div>
                     </div>
                 </div>
@@ -375,8 +266,7 @@
 					<h3 style="margin-top:20%">YouTube</h3>
 					<span>해당가수의 관련 영상</span> </br>
 
-					<iframe width="670" height="450" src="https://www.youtube.com/embed/iDjQSdN_ig8?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+					<iframe id = "youtube" width="670" height="450" src="https://www.youtube.com/embed/iDjQSdN_ig8?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -399,53 +289,193 @@
 		</div>
 	</div>
 
-	<script>
-		// checkbox 중복방지
-		function checkOnlyOne(element) {
-			const checkboxes = document.getElementsByName("song");
-			checkboxes.forEach((cb) => {
-				cb.checked = false;
-			})
-			element.checked = true;
-		}
-	</script>
-
 <script>
-	new Chart(document.getElementById("radar-chart"), {
-		type: 'radar',
-		data: {
-		labels: ["행복", "사랑", "우울", "놀람", "분노"],
-		datasets: [
-		{
-			label: "선택 곡",
-			fill: true,
-			backgroundColor: "rgba(179,181,198,0.2)",
-			borderColor: "rgba(179,181,198,1)",
-			pointBorderColor: "#fff",
-			pointBackgroundColor: "rgba(179,181,198,1)",
-			data: [8.77,55.61,21.69,6.62,6.82]
-		}, {
-			label: "추천 곡",
-			fill: true,
-			backgroundColor: "rgba(255,99,132,0.2)",
-			borderColor: "rgba(255,99,132,1)",
-			pointBorderColor: "#fff",
-			pointBackgroundColor: "rgba(255,99,132,1)",
-			pointBorderColor: "#fff",
-			data: [25.48,54.16,7.61,8.06,4.45]
-		}
-		]
-		},
-		options: {
-		responsive: false,
-		maintainAspectRatio: false,
-		title: {
-		display: true
-		}
-	}
-});
-</script>
+        let ksen1;
+        let ksen2;
+        let ksen3;
+        let ksen4;
+        let ksen5;
 
+        let psenti1;
+        let psenti2;
+        let psenti3;
+        let psenti4;
+        let psenti5;
+
+
+        let music_num;
+
+        function checkOnlyOne(num){
+            music_num = num
+        }
+
+        function dam() {
+            $.ajax({
+                url: "list_dam",
+                data: {music_num: music_num},
+                method: "post",
+                dataType: "json",
+                success: function (data) {
+                    console.log("성공");
+                },
+                error: function () {
+                    console.log("error");
+                }
+            });
+        }
+
+
+        function sel_al() {
+        let title = music_num;
+        console.log(title);
+        $.ajax({
+            url: "list_select",
+            data: {music_num:music_num},
+            method: "post",
+            dataType: "json",
+            success: function (data) {
+                console.log("성공");
+                console.log(data[0].music_lyrics);
+                title1 = data[0].music_title;
+                singer = data[0].music_singer;
+                lyrics1 = data[0].music_lyrics;
+                image_path1 = data[0].image_path;
+                youtube_path1 = data[0].youtube_path;
+
+                ksen1 = data[0].senti1;
+                ksen2 = data[0].senti2;
+                ksen3 = data[0].senti3;
+                ksen4 = data[0].senti4;
+                ksen5 = data[0].senti5;
+
+				const img = document.querySelector('#img1');
+                img.src = '/assets/' + image_path1 + '.jpg'
+                img.width = 350
+                img.height = 350
+                img.padding = 10, 5
+                $("#mmt").html(singer+"-"+title1);
+
+
+
+            },
+            error : function() {
+                console.log("error");}
+        });
+
+    }
+
+    function comp(e) {
+
+        console.log(music_num);
+        $.ajax({
+            url: "list_same",
+            data: {music_num:music_num},
+            method: "post",
+            dataType: "json",
+            success: function (data) {
+                console.log("성공");
+                console.log(data);
+                console.log(data['title1'][0]);
+                title1 = (data['title1'][0]);
+                singer1 = (data['music_singer'][0]);
+
+                psenti1 = parseInt(data['senti1'][0])
+                psenti2 = parseInt(data['senti2'][0])
+                psenti3 = parseInt(data['senti3'][0])
+                psenti4 = parseInt(data['senti4'][0])
+                psenti5 = parseInt(data['senti5'][0])
+
+                console.log(psenti1);
+                console.log(singer);
+                console.log(title1);
+
+                const img2 = document.querySelector('#img2');
+                img2.src = '/assets/' + (data['image_path'][0]) + '.jpg'
+                img2.width = 350
+                img2.height = 350
+                img2.padding = 10, 5
+                const img3 = document.querySelector('#img3');
+                img3.src = '/assets/' + (data['image_path'][1]) + '.jpg'
+                img3.width = 350
+                img3.height = 350
+                img3.padding = 10, 5
+                const img4 = document.querySelector('#img4');
+                img4.src = '/assets/' + (data['image_path'][2]) + '.jpg'
+                img4.width = 350
+                img4.height = 350
+                img4.padding = 10, 5
+                const img5 = document.querySelector('#img5');
+                img5.src = '/assets/' + (data['image_path'][3]) + '.jpg'
+                img5.width = 350
+                img5.height = 350
+                img5.padding = 10, 5
+                const img6 = document.querySelector('#img6');
+                img6.src = '/assets/' + (data['image_path'][4]) + '.jpg'
+                img6.width = 350
+                img6.height = 350
+                img6.padding = 10, 5
+
+
+                $("#mmt1").html(singer1+"-"+title1);
+                $("#mmt2").html(data['music_singer'][1]);
+                $("#mmt3").html(data['music_singer'][2]);
+                $("#mmt4").html(data['music_singer'][3]);
+                $("#mmt5").html(data['music_singer'][4]);
+
+
+
+                senti1 = data['senti1'][0]
+                console.log(senti1)
+
+
+                new Chart(document.getElementById("radar-chart"), {
+                    type: 'radar',
+                    data: {
+                        labels: ["행복", "사랑", "우울", "애증", "신남"],
+                        datasets: [
+                            {
+                                label: "선택 곡",
+                                fill: true,
+                                backgroundColor: "rgba(179,181,198,0.2)",
+                                borderColor: "rgba(179,181,198,1)",
+                                pointBorderColor: "#fff",
+                                pointBackgroundColor: "rgba(179,181,198,1)",
+                                data: [ksen1, ksen2, ksen3, ksen4, ksen5]
+                            }, {
+                                label: "추천 곡",
+                                fill: true,
+                                backgroundColor: "rgba(255,99,132,0.2)",
+                                borderColor: "rgba(255,99,132,1)",
+                                pointBorderColor: "#fff",
+                                pointBackgroundColor: "rgba(255,99,132,1)",
+                                pointBorderColor: "#fff",
+                                data: [psenti1, psenti2, psenti3, psenti4, psenti5]
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: false,
+                        maintainAspectRatio: false,
+                        title: {
+                            display: true
+                        }
+                    }
+                });
+
+
+
+
+            },
+            error : function() {
+                console.log("error");}
+        });
+
+
+
+
+
+    }
+</script>
 
 	<!-- js -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>

@@ -19,7 +19,7 @@ def index(request):
     return render(request, 'user/index.html')
 
 def main(request):
-    return render(request, 'main/main1.html')
+    return render(request, 'main/main.html')
 
 
 

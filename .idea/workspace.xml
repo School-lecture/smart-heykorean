@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="baaec839-5d02-4e36-ab41-666390c54cbc" name="Changes" comment="합본">
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/34d10e92-f1e0-46d6-b23d-3012ebb25d97.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/34d10e92-f1e0-46d6-b23d-3012ebb25d97/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/34d10e92-f1e0-46d6-b23d-3012ebb25d97/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jwh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/samples/landscape.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/samples/portrait.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/users/avatar-002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/base.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/project.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/project.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/migrations/0002_delete_music.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playlist/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playlist/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playlist/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playlist/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playlist/migrations/0002_musicmusic_playlistplaylist_delete_playlist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playlist/migrations/0003_alter_musicmusic_options_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playlist/migrations/0004_delete_musicmusic_delete_playlistplaylist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playlist/migrations/0005_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playlist/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playlist/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playlist/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playlist/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/2.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js-project/project.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js/_.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js/form-adv-datepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js/form-adv-label.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js/form-adv-textarea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js/header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js/music.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js/snackbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js/tile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/js/wave.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass-project/project.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/addons/_material-icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/addons/_waves.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/addons/material-icons/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/addons/material-icons/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/addons/material-icons/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/addons/material-icons/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/base/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/base/_reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_avatar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_breadcrumb.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_button-flat.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_button-float.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_code.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_form-adv-checkbox.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_form-adv-datepicker.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_form-adv-label.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_form-adv-switch.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_form-adv-textarea.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_form.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_label.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_modal.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_progress-circular.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_progress-loadbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_snackbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_tab.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_table.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/components/_tile.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/elements/_content.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/elements/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/elements/_header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/elements/_menu.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/mixin/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/mixin/_responsive.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/mixin/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/utilities/_print.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/utilities/_utilities-responsive.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/utilities/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/var/_colours.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/assets2/sass/var/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/bootstrap-3.3.7-dist/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/base.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/celender.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/fonts/MaterialIcons-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/fonts/MaterialIcons-Regular.ijmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/fonts/MaterialIcons-Regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/fonts/MaterialIcons-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/fonts/MaterialIcons-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/fonts/MaterialIcons-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/fonts/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/fonts/codepoints" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/ANN.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/IU.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/bg/amber.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/bg/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/bg/banner2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/bg/brand.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/bg/green.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/bg/purple.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/bg/red.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/bg/teal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/ex01.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/ex02.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/ex03.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/team/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/team/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/team/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/team/04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/images/team/1.5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/music.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/project.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/project.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/css/user.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/MaterialIcons-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/MaterialIcons-Regular.ijmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/MaterialIcons-Regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/MaterialIcons-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/MaterialIcons-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/MaterialIcons-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/NanumBarunGothic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/NanumGothic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/codepoints" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/fontawesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/ANN.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/IU.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/banner/banner - copy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/banner/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/ex01.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/ex02.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/ex03.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/images/samples/landscape.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/images/samples/portrait.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/images/users/avatar-001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/logoch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/dark_rounded/btnnext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/dark_rounded/btnprevious.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/dark_rounded/contentpattern.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/dark_rounded/default_thumbnail.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/dark_rounded/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/dark_rounded/sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/dark_square/btnnext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/dark_square/btnprevious.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/dark_square/contentpattern.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/dark_square/default_thumbnail.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/dark_square/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/dark_square/sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/default/default_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/default/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/default/sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/default/sprite_next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/default/sprite_prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/default/sprite_x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/default/sprite_y.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/facebook/btnnext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/facebook/btnprevious.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/facebook/contentpatternbottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/facebook/contentpatternleft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/facebook/contentpatternright.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/facebook/contentpatterntop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/facebook/default_thumbnail.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/facebook/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/facebook/sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/light_rounded/btnnext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/light_rounded/btnprevious.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/light_rounded/default_thumbnail.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/light_rounded/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/light_rounded/sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/light_square/btnnext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/light_square/btnprevious.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/light_square/default_thumbnail.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/light_square/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/prettyPhoto/light_square/sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/recycle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/reply.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/samples/landscape.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/samples/portrait.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/users/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/users/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/users/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/users/04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/users/1.5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/users/about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/users/avatar-001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/users/매칭.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/users/매칭1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/아델.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/base.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/custom-scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/html5shiv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/jquery.inview.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/jquery.isotope.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/jquery.prettyphoto.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/jquery/jquery-1.9.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/mousescroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/music.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/paging.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/project.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/project.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/respond.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/smoothscroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/theme-chooser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/json/events.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales-all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales-all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ar-dz.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ar-kw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ar-ly.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ar-ma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ar-sa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ar-tn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/bn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/bs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/de-at.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/en-au.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/en-gb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/en-nz.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/eo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/es-us.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/fr-ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/fr-ch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/hy-am.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ka.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/kk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ku.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/lb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ne.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/nn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/pt-br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/si-lk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/sm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/sr-cyrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ta-in.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/ug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/uz.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/locales/zh-tw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/main.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/lib/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cal/daygrid-views.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/main/main1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/main/main2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/joinform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/joinsuccess.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/loginform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/updateform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/y2mate.com - MV LUCY  Hero히어로.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/migrations/0002_event.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/migrations/0003_music_playlist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/migrations/0004_usermusic_userplaylist_userplaylist2_delete_music_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/migrations/0005_delete_userplaylist2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/migrations/0006_music_playlist_delete_usermusic_delete_userplaylist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/migrations/0007_delete_music_delete_playlist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/music/urls.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/music/views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/main/main1.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/user/index.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/user/joinform.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/user/joinsuccess.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/user/updateform.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/user/views.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="293cnABrDlfVD6bBYOGmgIUlIV5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/smhrd/Desktop/최종합본/smart-heykorean&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\smhrd\Desktop\jwh\jwh" />
+      <recent name="C:\Users\smhrd\Desktop\jwh" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="jwh" type="Python.DjangoServer" factoryName="Django server">
+      <module name="jwh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="jwh.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="baaec839-5d02-4e36-ab41-666390c54cbc" name="Changes" comment="" />
+      <created>1652345374083</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652345374083</updated>
+      <workItem from="1652345388327" duration="32000" />
+      <workItem from="1652345435077" duration="8000" />
+      <workItem from="1652345536702" duration="10000" />
+      <workItem from="1652345608987" duration="7114000" />
+      <workItem from="1652352881407" duration="64000" />
+      <workItem from="1652352961629" duration="527000" />
+      <workItem from="1652353533890" duration="118000" />
+      <workItem from="1652353659619" duration="85000" />
+      <workItem from="1652353774874" duration="95000" />
+      <workItem from="1652353978479" duration="370000" />
+      <workItem from="1652400771361" duration="7211000" />
+      <workItem from="1652409665259" duration="7000" />
+      <workItem from="1652410866045" duration="9472000" />
+      <workItem from="1652431227199" duration="11000" />
+      <workItem from="1652431266158" duration="90000" />
+    </task>
+    <task id="LOCAL-00621" summary="합본">
+      <created>1652430623040</created>
+      <option name="number" value="00621" />
+      <option name="presentableId" value="LOCAL-00621" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430623040</updated>
+    </task>
+    <task id="LOCAL-00622" summary="합본">
+      <created>1652430625869</created>
+      <option name="number" value="00622" />
+      <option name="presentableId" value="LOCAL-00622" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430625869</updated>
+    </task>
+    <task id="LOCAL-00623" summary="합본">
+      <created>1652430628491</created>
+      <option name="number" value="00623" />
+      <option name="presentableId" value="LOCAL-00623" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430628491</updated>
+    </task>
+    <task id="LOCAL-00624" summary="합본">
+      <created>1652430631629</created>
+      <option name="number" value="00624" />
+      <option name="presentableId" value="LOCAL-00624" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430631629</updated>
+    </task>
+    <task id="LOCAL-00625" summary="합본">
+      <created>1652430635449</created>
+      <option name="number" value="00625" />
+      <option name="presentableId" value="LOCAL-00625" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430635449</updated>
+    </task>
+    <task id="LOCAL-00626" summary="합본">
+      <created>1652430638013</created>
+      <option name="number" value="00626" />
+      <option name="presentableId" value="LOCAL-00626" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430638013</updated>
+    </task>
+    <task id="LOCAL-00627" summary="합본">
+      <created>1652430640750</created>
+      <option name="number" value="00627" />
+      <option name="presentableId" value="LOCAL-00627" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430640750</updated>
+    </task>
+    <task id="LOCAL-00628" summary="합본">
+      <created>1652430643874</created>
+      <option name="number" value="00628" />
+      <option name="presentableId" value="LOCAL-00628" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430643874</updated>
+    </task>
+    <task id="LOCAL-00629" summary="합본">
+      <created>1652430646496</created>
+      <option name="number" value="00629" />
+      <option name="presentableId" value="LOCAL-00629" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430646496</updated>
+    </task>
+    <task id="LOCAL-00630" summary="합본">
+      <created>1652430649488</created>
+      <option name="number" value="00630" />
+      <option name="presentableId" value="LOCAL-00630" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430649488</updated>
+    </task>
+    <task id="LOCAL-00631" summary="합본">
+      <created>1652430652664</created>
+      <option name="number" value="00631" />
+      <option name="presentableId" value="LOCAL-00631" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430652664</updated>
+    </task>
+    <task id="LOCAL-00632" summary="합본">
+      <created>1652430655239</created>
+      <option name="number" value="00632" />
+      <option name="presentableId" value="LOCAL-00632" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430655239</updated>
+    </task>
+    <task id="LOCAL-00633" summary="합본">
+      <created>1652430657761</created>
+      <option name="number" value="00633" />
+      <option name="presentableId" value="LOCAL-00633" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430657761</updated>
+    </task>
+    <task id="LOCAL-00634" summary="합본">
+      <created>1652430660367</created>
+      <option name="number" value="00634" />
+      <option name="presentableId" value="LOCAL-00634" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430660367</updated>
+    </task>
+    <task id="LOCAL-00635" summary="합본">
+      <created>1652430662956</created>
+      <option name="number" value="00635" />
+      <option name="presentableId" value="LOCAL-00635" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430662956</updated>
+    </task>
+    <task id="LOCAL-00636" summary="합본">
+      <created>1652430665894</created>
+      <option name="number" value="00636" />
+      <option name="presentableId" value="LOCAL-00636" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430665894</updated>
+    </task>
+    <task id="LOCAL-00637" summary="합본">
+      <created>1652430669286</created>
+      <option name="number" value="00637" />
+      <option name="presentableId" value="LOCAL-00637" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430669286</updated>
+    </task>
+    <task id="LOCAL-00638" summary="합본">
+      <created>1652430672232</created>
+      <option name="number" value="00638" />
+      <option name="presentableId" value="LOCAL-00638" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430672232</updated>
+    </task>
+    <task id="LOCAL-00639" summary="합본">
+      <created>1652430674921</created>
+      <option name="number" value="00639" />
+      <option name="presentableId" value="LOCAL-00639" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430674921</updated>
+    </task>
+    <task id="LOCAL-00640" summary="합본">
+      <created>1652430678284</created>
+      <option name="number" value="00640" />
+      <option name="presentableId" value="LOCAL-00640" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430678284</updated>
+    </task>
+    <task id="LOCAL-00641" summary="합본">
+      <created>1652430681654</created>
+      <option name="number" value="00641" />
+      <option name="presentableId" value="LOCAL-00641" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430681654</updated>
+    </task>
+    <task id="LOCAL-00642" summary="합본">
+      <created>1652430684199</created>
+      <option name="number" value="00642" />
+      <option name="presentableId" value="LOCAL-00642" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430684199</updated>
+    </task>
+    <task id="LOCAL-00643" summary="합본">
+      <created>1652430686689</created>
+      <option name="number" value="00643" />
+      <option name="presentableId" value="LOCAL-00643" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430686689</updated>
+    </task>
+    <task id="LOCAL-00644" summary="합본">
+      <created>1652430689397</created>
+      <option name="number" value="00644" />
+      <option name="presentableId" value="LOCAL-00644" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430689397</updated>
+    </task>
+    <task id="LOCAL-00645" summary="합본">
+      <created>1652430692103</created>
+      <option name="number" value="00645" />
+      <option name="presentableId" value="LOCAL-00645" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430692103</updated>
+    </task>
+    <task id="LOCAL-00646" summary="합본">
+      <created>1652430695410</created>
+      <option name="number" value="00646" />
+      <option name="presentableId" value="LOCAL-00646" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430695410</updated>
+    </task>
+    <task id="LOCAL-00647" summary="합본">
+      <created>1652430698480</created>
+      <option name="number" value="00647" />
+      <option name="presentableId" value="LOCAL-00647" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430698480</updated>
+    </task>
+    <task id="LOCAL-00648" summary="합본">
+      <created>1652430700987</created>
+      <option name="number" value="00648" />
+      <option name="presentableId" value="LOCAL-00648" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430700987</updated>
+    </task>
+    <task id="LOCAL-00649" summary="합본">
+      <created>1652430704264</created>
+      <option name="number" value="00649" />
+      <option name="presentableId" value="LOCAL-00649" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430704264</updated>
+    </task>
+    <task id="LOCAL-00650" summary="합본">
+      <created>1652430707319</created>
+      <option name="number" value="00650" />
+      <option name="presentableId" value="LOCAL-00650" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430707319</updated>
+    </task>
+    <task id="LOCAL-00651" summary="합본">
+      <created>1652430709778</created>
+      <option name="number" value="00651" />
+      <option name="presentableId" value="LOCAL-00651" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430709778</updated>
+    </task>
+    <task id="LOCAL-00652" summary="합본">
+      <created>1652430713154</created>
+      <option name="number" value="00652" />
+      <option name="presentableId" value="LOCAL-00652" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430713154</updated>
+    </task>
+    <task id="LOCAL-00653" summary="합본">
+      <created>1652430715776</created>
+      <option name="number" value="00653" />
+      <option name="presentableId" value="LOCAL-00653" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430715776</updated>
+    </task>
+    <task id="LOCAL-00654" summary="합본">
+      <created>1652430718483</created>
+      <option name="number" value="00654" />
+      <option name="presentableId" value="LOCAL-00654" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430718483</updated>
+    </task>
+    <task id="LOCAL-00655" summary="합본">
+      <created>1652430721675</created>
+      <option name="number" value="00655" />
+      <option name="presentableId" value="LOCAL-00655" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430721675</updated>
+    </task>
+    <task id="LOCAL-00656" summary="합본">
+      <created>1652430724528</created>
+      <option name="number" value="00656" />
+      <option name="presentableId" value="LOCAL-00656" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430724528</updated>
+    </task>
+    <task id="LOCAL-00657" summary="합본">
+      <created>1652430727520</created>
+      <option name="number" value="00657" />
+      <option name="presentableId" value="LOCAL-00657" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430727520</updated>
+    </task>
+    <task id="LOCAL-00658" summary="합본">
+      <created>1652430731014</created>
+      <option name="number" value="00658" />
+      <option name="presentableId" value="LOCAL-00658" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430731014</updated>
+    </task>
+    <task id="LOCAL-00659" summary="합본">
+      <created>1652430734637</created>
+      <option name="number" value="00659" />
+      <option name="presentableId" value="LOCAL-00659" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430734637</updated>
+    </task>
+    <task id="LOCAL-00660" summary="합본">
+      <created>1652430737891</created>
+      <option name="number" value="00660" />
+      <option name="presentableId" value="LOCAL-00660" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430737897</updated>
+    </task>
+    <task id="LOCAL-00661" summary="합본">
+      <created>1652430740420</created>
+      <option name="number" value="00661" />
+      <option name="presentableId" value="LOCAL-00661" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430740420</updated>
+    </task>
+    <task id="LOCAL-00662" summary="합본">
+      <created>1652430743011</created>
+      <option name="number" value="00662" />
+      <option name="presentableId" value="LOCAL-00662" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430743011</updated>
+    </task>
+    <task id="LOCAL-00663" summary="합본">
+      <created>1652430745417</created>
+      <option name="number" value="00663" />
+      <option name="presentableId" value="LOCAL-00663" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430745417</updated>
+    </task>
+    <task id="LOCAL-00664" summary="합본">
+      <created>1652430748224</created>
+      <option name="number" value="00664" />
+      <option name="presentableId" value="LOCAL-00664" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430748224</updated>
+    </task>
+    <task id="LOCAL-00665" summary="합본">
+      <created>1652430750692</created>
+      <option name="number" value="00665" />
+      <option name="presentableId" value="LOCAL-00665" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430750692</updated>
+    </task>
+    <task id="LOCAL-00666" summary="합본">
+      <created>1652430753799</created>
+      <option name="number" value="00666" />
+      <option name="presentableId" value="LOCAL-00666" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430753799</updated>
+    </task>
+    <task id="LOCAL-00667" summary="합본">
+      <created>1652430756406</created>
+      <option name="number" value="00667" />
+      <option name="presentableId" value="LOCAL-00667" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430756406</updated>
+    </task>
+    <task id="LOCAL-00668" summary="합본">
+      <created>1652430759027</created>
+      <option name="number" value="00668" />
+      <option name="presentableId" value="LOCAL-00668" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430759027</updated>
+    </task>
+    <task id="LOCAL-00669" summary="합본">
+      <created>1652430761872</created>
+      <option name="number" value="00669" />
+      <option name="presentableId" value="LOCAL-00669" />
+      <option name="project" value="LOCAL" />
+      <updated>1652430761872</updated>
+    </task>
+    <option name="localTasksCounter" value="670" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/smart-heykorean" />
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="합본" />
+    <option name="LAST_COMMIT_MESSAGE" value="합본" />
+  </component>
+</project>

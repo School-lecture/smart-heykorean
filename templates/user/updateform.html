@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	{% block csslink %}
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>감정분석 기반 나만의 음악 추천, hey-korean</title>
+
+	<!-- css -->
+	<link href="/assets/css/base.min.css" rel="stylesheet">
+
+	<!-- css for doc -->
+	<link href="/assets/css/user.css" rel="stylesheet" type="text/css">
+	<!-- favicon -->
+	<!-- ... -->
+	{% endblock %}
+</head>
+
+{% if request.GET.result == 'success' %}
+<script>
+	alert('정보 수정이 완료되었습니다.')
+    location.href="{% url 'music:list' %}";
+</script>
+{% endif %}
+
+<body class="page-brand">
+<main class="content">
+		<div class="content-heading">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-lg-push-2 col-sm-8 col-sm-push-1">
+						<h1 class="heading"></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-5 col-lg-push-3 col-sm-8 col-sm-push-2">
+               <section class="content-inner margin-top-no">
+                  <div class="card">
+                     <div class="card-main">
+                        <div class="card-inner" >
+
+                            <form id="join-form" name="joinForm" method="post" action="{% url 'user:update' %}">
+		                        {% csrf_token %}
+
+                            <div class="update">
+                                <img class="img-responsive" src="/assets/css/images/logo.png">
+                                 <div class="update_id">
+		<label for = "password" >비밀번호</label>
+		<input id = "password" name="password" type="password" value="" placeholder=""><br><br>
+
+		<label for="name">이름</label>
+		<input id="name" name="name" type="text" value="{{ user.name }}"><br><br>
+
+		<select name="gender" class="select_gender">
+            <option value="gender" selected>성별을 선택해주세요</option>
+            <option value="female">여</option>
+            <option value="male">남</option>
+        </select><br><br>
+
+		<label for = "phone_num">전화번호</label>
+		<input id="phone_num" name="phone_num" type="text" value="{{ user.phone_num }}" placeholder="전화번호를 입력해주세요"><br><br>
+        </div>
+		<div class="submit">
+			<input type="submit" class="submit" value="수정하기">
+		</div>
+	</form>
+
+</div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+   </main>
+
+<footer class="footer">
+      <div class="container">
+         <p>hey-korean</p>
+      </div>
+   </footer>
+
+
+   <!-- js -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+   <script src="/assets/js/base.min.js"></script>
+
+   <!-- js for doc -->
+   <script src="/assets/js/project.min.js"></script>
+</body>
+</html>

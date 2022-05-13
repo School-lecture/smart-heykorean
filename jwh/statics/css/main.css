@@ -1,0 +1,86 @@
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 18px;
+  color: #676767;
+}
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+button {
+  margin: 20px;
+  text-align: center;
+}
+.custom-btn {
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+#popup_open_btn {
+  width: 100px;
+  height: 40px;
+  line-height: 30px;
+  padding: 0;
+  border-radius: 10px;
+  position: relative;
+  background-color: #ffffff8d;
+}
+
+#popup_open_btn:hover {
+  color: rgb(249, 105, 14);
+  background: transparent;
+   box-shadow:none;
+}
+
+/***********************
+********* table ******
+************************/
+
+table{
+  width:80%;
+  text-align: center;
+}
+.tbl-header{
+  background-color: rgba(255, 255, 255, 0.3);
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+}
+th{
+  padding: 10px 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+td{
+  padding: 10px 5px;
+  text-align: center;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 15px;
+  border-bottom: solid 1px;
+  border-color: rgb(255, 175, 56);
+}
+
+
+

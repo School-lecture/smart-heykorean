@@ -38,6 +38,7 @@
 				<ul class="dropdown-menu">
 					<li>
 						<a class="padding-right-lg waves-attach" href="../user/logout"><span class="icon icon-lg margin-right">exit_to_app</span>Logout</a>
+                        <a class="padding-right-lg waves-attach" href="../user/updateform"><span class="icon icon-lg margin-right">exit_to_app</span>내정보수정</a>
 					</li>
 				</ul>
 			</li>
@@ -193,7 +194,7 @@
 		</div>
 	</nav>
 	<main class="content">
-		<div class="content-heading" style="margin-top: 60px;">
+		<div class="content-heading" style="margin-top: 79px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
@@ -208,7 +209,7 @@
 			<div class="row">
 				<div class="col-lg-10 col-lg-push-1 col-sm-10 col-sm-push-3">
 					<section class="content-inner margin-top-no">
-						<div class="card">
+						<div class="card" style="margin-top:10%">
 							<div class="card-main" align="center">
 								<h3 class="content-sub-heading">매칭 할 곡을 선택하고 노래선택 버튼을 눌러주세요.</h3>
 								<div class="card-inner" >
@@ -228,8 +229,8 @@
 										  <tbody>
 
 
- {% for music in music_list %}
-     {% csrf_token %}
+                                    {% for music in music_list %}
+                                        {% csrf_token %}
 											<tr>
 												<td style="width: 10%">
 													<label class="control control--checkbox">
@@ -241,7 +242,7 @@
 											  <td>{{ music.music_singer }}</td>
 											  <td>{{ music.music_title }}</td>
 											</tr>
-   {% endfor %}
+                                        {% endfor %}
 
 
 										  </tbody>
@@ -249,13 +250,13 @@
 									  </div>
 
 									<button id="popup_open_btn" type="submit" onclick="sel_al()">노래선택</button>
-									<p>사용방법을 잘 모르시겠다면 <a href="#" target="_blank">여기<sup class="margin-left-xs"><span class="icon">open_in_new</span></sup></a> 를 클릭하세요.</p>
+									<p>사용방법을 잘 모르시겠다면 <a href="{% url 'user:index' %}" target="_blank">여기<sup class="margin-left-xs"><span class="icon">open_in_new</span></sup></a> 를 클릭하세요.</p>
 								</div>
 							</div>
 						</div>
 
 
-						<h2 class="content-sub-heading">감정유사도 1위</h2>
+						<h2 class="content-sub-heading" style="margin-top:15%">감정유사도 1위</h2>
 						<div class="card-inner" >
 								<div class="tile-inner" align = "center">
 									<table>
@@ -273,7 +274,7 @@
 								</div>
 						</div>
 </br></br>
-						<h2 class="content-sub-heading">감정분석결과</h2>
+						<h2 class="content-sub-heading" style="margin-top:10%">감정분석결과</h2>
 						<div class="tile-wrap">
 								<div class="tile-inner" align="center">
 								<!--차트-->
@@ -347,16 +348,7 @@
 			<p>hey-korean</p>
 		</div>
 	</footer>
-	<div class="fbtn-container">
-		<div class="fbtn-inner">
-			<a class="fbtn fbtn-lg fbtn-amber-accent waves-attach waves-circle waves-light" data-toggle="dropdown"><span class="fbtn-text">Links</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
-			<div class="fbtn-dropdown">
-				<a class="fbtn waves-attach waves-circle" href="#" target="_blank"><span class="fbtn-text">Fork me on GitHub</span><span class="icon">code</span></a>
-				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light" href="#" target="_blank"><span class="fbtn-text">Follow Daemon on Twitter</span><span class="icon">share</span></a>
-				<a class="fbtn fbtn-green waves-attach waves-circle" href="#" target="_blank"><span class="fbtn-text">Website</span><span class="icon">link</span></a>
-			</div>
-		</div>
-	</div>
+
 
 
 	<script>

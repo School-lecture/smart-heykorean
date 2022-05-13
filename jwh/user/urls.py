@@ -25,5 +25,4 @@ urlpatterns = [
     path('calp', views.calp, name='calp'),
     path('calendar', views.calendar, name='calendar'),
 
-
 ]

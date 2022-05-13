@@ -18,15 +18,11 @@ from django.urls import path, include
 import main.views as main_views
 import user.views as uv
 
-from music.views import List
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', uv.index),
     path('user/', include('user.urls')),
-
-    path('loginform', uv.loginform),
-
-    path('list/', List.as_view()),
-    path('list/', include('music.urls'))
+    path('music/', include('music.urls'))
 ]

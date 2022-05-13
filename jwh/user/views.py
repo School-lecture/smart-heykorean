@@ -32,7 +32,7 @@ def join(request):
     user.phone_num = request.POST['phone_num']
     user.save()
 
-    return HttpResponseRedirect('./joinsuccess')
+    return HttpResponseRedirect('./main')
 
 def loginform(request) :
     return render(request, 'user/loginform.html')

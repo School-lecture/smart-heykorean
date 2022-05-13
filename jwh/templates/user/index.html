@@ -71,16 +71,22 @@
 				</a>
 			</li>
 		</ul>
-		<a class="header-logo margin-left-no" href="index.html"><img src="/assets/css/images/logo.png"></a>
+		<a class="header-logo margin-left-no" href="{% url 'user:main' %}"><img src="/assets/css/images/logo.png"></a>
 	</header>
 
 	<!--start버튼-->
 	<main class="content">
 		<div class="content-heading" style="margin-top: 75px;">
             <div class="row">
+                {% if request.GET.user.id == null %}
                 <div class="col-sm-12">
-                        <a class="btn-primary" href="loginform">START</a>
+                        <a class="btn-primary" href="{% url 'user:loginform' %}">START</a>
                 </div>
+                {% else %}
+                  <div class="col-sm-12">
+                        <a class="btn-primary" href="{% url 'user:main' %}">START</a>
+                </div>
+                {% endif %}
             </div>
 		</main>
 			<div class="container">
@@ -180,16 +186,7 @@
 			<p>hey-korean</p>
 		</div>
 	</footer>
-	<div class="fbtn-container">
-		<div class="fbtn-inner">
-			<a class="fbtn fbtn-lg fbtn-amber3-accent waves-attach waves-circle waves-light" data-toggle="dropdown"><span class="fbtn-text">Links</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
-			<div class="fbtn-dropdown">
-				<a class="fbtn waves-attach waves-circle" href="#" target="_blank"><span class="fbtn-text">Fork me on GitHub</span><span class="icon">code</span></a>
-				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light" href="#" target="_blank"><span class="fbtn-text">Follow Daemon on Twitter</span><span class="icon">share</span></a>
-				<a class="fbtn fbtn-green waves-attach waves-circle" href="#" target="_blank"><span class="fbtn-text">Website</span><span class="icon">link</span></a>
-			</div>
-		</div>
-	</div>
+
 
 
 	<!-- js -->

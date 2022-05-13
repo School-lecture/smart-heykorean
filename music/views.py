@@ -48,7 +48,7 @@ class List(APIView):
 
         # print(mlist)
 
-        return render(request, 'main/main1.html', context=dict(music_list=music_list, play_list=play_list, list=mlist))
+        return render(request, 'main/main.html', context=dict(music_list=music_list, play_list=play_list, list=mlist))
 
 
 
